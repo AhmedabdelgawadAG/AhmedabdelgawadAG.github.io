@@ -1,0 +1,1403 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>أحمد عبد الجواد | مصمم جرافيك</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f5f1e8;--grid:#d5ddd4;--card:#fffdf8;--ink:#183533;--muted:#55706d;
+  --teal:#2f7774;--on-teal:#fffdf8;--wa:#1c8a4a;--on-wa:#fff;--line:#bccdc8;
+  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0f1b1a;--grid:#1b2e2c;--card:#142423;--ink:#eaf1ee;--muted:#9db5b0;
+  --teal:#5bbab5;--on-teal:#0a1514;--wa:#3ecf7c;--on-wa:#08150d;--line:#2a4744;}}
+:root[data-theme="dark"]{
+  --bg:#0f1b1a;--grid:#1b2e2c;--card:#142423;--ink:#eaf1ee;--muted:#9db5b0;
+  --teal:#5bbab5;--on-teal:#0a1514;--wa:#3ecf7c;--on-wa:#08150d;--line:#2a4744;}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background-color:var(--bg);color:var(--ink);font-family:"Cairo",system-ui,"Segoe UI",Tahoma,sans-serif;font-weight:500;line-height:1.7;
+  background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:44px 44px}
+.en{display:none}
+html[lang="en"] .en{display:inline}html[lang="en"] .ar{display:none}
+html[lang="en"] .en.blk{display:block}
+.wrap{max-width:960px;margin:0 auto;padding:0 20px}
+.top{display:flex;justify-content:space-between;align-items:center;padding:16px 0}
+.mark{font-weight:900;font-size:1.25rem;color:var(--teal);letter-spacing:.02em}
+.lang{font:inherit;font-weight:700;background:var(--card);color:var(--ink);border:2px solid var(--teal);border-radius:8px;padding:4px 14px;cursor:pointer}
+:focus-visible{outline:3px solid var(--teal);outline-offset:3px}
+.hero{padding:34px 0 56px}
+.name{position:relative;display:inline-block;margin:0;padding:22px 30px;font-size:clamp(2.4rem,9vw,5rem);line-height:1.15;font-weight:900;color:var(--teal);
+  border:4px solid var(--teal);border-radius:46% 54% 50% 50%/56% 44% 56% 44%;transform:rotate(-1.5deg);background:var(--bg)}
+.name::after{content:"";position:absolute;inset:-12px -10px -8px -14px;border:3px solid var(--teal);border-radius:52% 48% 46% 54%/45% 55% 45% 55%;opacity:.45;transform:rotate(2.5deg)}
+.role{font-size:clamp(1.15rem,3.6vw,1.6rem);font-weight:700;margin:34px 0 6px}
+.sub{max-width:34em;color:var(--muted);margin:0 0 26px}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;gap:8px;font:inherit;font-weight:700;text-decoration:none;cursor:pointer;
+  padding:12px 22px;border-radius:12px;border:2px solid var(--teal);background:var(--card);color:var(--ink)}
+.btn.wa{background:var(--wa);border-color:var(--wa);color:var(--on-wa)}
+.btn.pri{background:var(--teal);color:var(--on-teal)}
+.btn:hover{filter:brightness(1.07)}
+h2{font-size:clamp(1.6rem,5vw,2.2rem);font-weight:900;margin:0 0 18px;color:var(--teal)}
+section{padding:40px 0}
+.band{background:var(--teal);color:var(--on-teal)}
+.band h2{color:var(--on-teal)}
+.svc{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:0;border:2px solid var(--on-teal)}
+.svc div{padding:18px;border:1px solid var(--on-teal);font-weight:700}
+.svc small{display:block;font-weight:500;opacity:.9}
+.work{list-style:none;margin:0;padding:0;border:2px solid var(--teal);background:var(--card)}
+.work li{display:flex;justify-content:space-between;gap:16px;padding:14px 18px;border-bottom:1px solid var(--line)}
+.work li:last-child{border-bottom:0}
+.work b{font-weight:900}.work span{color:var(--muted);text-align:end}
+.more{margin-top:16px}
+.ways{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;margin-bottom:26px}
+.way{background:var(--card);border:2px solid var(--teal);border-radius:14px;padding:16px 18px;display:flex;flex-direction:column;gap:4px}
+.way strong{font-weight:900}
+.way a.v{color:var(--ink);font-weight:700;overflow-wrap:anywhere;direction:ltr;text-align:start}
+.way button{align-self:flex-start;margin-top:6px;font:inherit;font-size:.9rem;font-weight:700;background:none;border:0;color:var(--teal);cursor:pointer;padding:2px 0;text-decoration:underline}
+form{background:var(--card);border:2px solid var(--teal);border-radius:14px;padding:20px;display:grid;gap:12px;max-width:620px}
+label{font-weight:700}
+input,textarea{width:100%;font:inherit;padding:10px 12px;border-radius:10px;border:2px solid var(--line);background:var(--bg);color:var(--ink)}
+textarea{min-height:110px;resize:vertical}
+.hint{color:var(--muted);font-size:.92rem;margin:0}
+footer{padding:26px 0 90px;color:var(--muted);text-align:center}
+.float{position:fixed;inset-inline-end:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:5;width:58px;height:58px;border-radius:50%;
+  background:var(--wa);color:var(--on-wa);display:grid;place-items:center;box-shadow:0 4px 14px rgba(0,0,0,.28);text-decoration:none}
+.float svg{width:30px;height:30px;fill:currentColor}
+.filters{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 20px}
+.filters button{font:inherit;font-weight:700;padding:8px 18px;border-radius:999px;border:2px solid var(--teal);background:var(--card);color:var(--ink);cursor:pointer}
+.filters button[aria-pressed="true"]{background:var(--teal);color:var(--on-teal)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px}
+.item{all:unset;box-sizing:border-box;cursor:pointer;display:flex;flex-direction:column;background:var(--card);border:2px solid var(--teal);border-radius:14px;overflow:hidden}
+.item[hidden]{display:none}
+.item:focus-visible{outline:3px solid var(--teal);outline-offset:3px}
+.item img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:top;display:block;background:var(--grid)}
+.item .cap{padding:10px 14px;display:flex;flex-direction:column}
+.item .cap b{font-weight:900}
+.item .cap span{color:var(--muted);font-size:.92rem}
+dialog#lb{width:min(920px,96vw);max-height:92vh;padding:0;border:3px solid var(--teal);border-radius:14px;background:var(--card);color:var(--ink);overflow:hidden}
+dialog#lb::backdrop{background:rgba(5,15,14,.8)}
+.lbbar{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 14px;border-bottom:2px solid var(--line)}
+.lbbar .t{font-weight:900}
+.lbbar .nav{display:flex;gap:8px}
+.lbbar button{font:inherit;font-weight:700;padding:6px 14px;border-radius:10px;border:2px solid var(--teal);background:var(--card);color:var(--ink);cursor:pointer}
+.lbbody{overflow:auto;max-height:calc(92vh - 62px);background:var(--bg)}
+.lbbody img{display:block;width:100%;height:auto}
+.subh{display:flex;align-items:baseline;flex-wrap:wrap;gap:6px 12px;margin:30px 0 12px;padding-bottom:8px;border-bottom:2px solid var(--line)}.subh h3{margin:0;font-size:1.25rem;font-weight:900;color:var(--teal)}.subh span.dim{color:var(--muted);font-weight:700}
+.soon{border:2px dashed var(--line);border-radius:14px;background:var(--card);padding:26px 20px;text-align:center;color:var(--muted);margin:8px 0 34px}.soon strong{display:block;color:var(--ink);font-size:1.1rem;margin-bottom:4px}
+.proj{display:grid;gap:26px;margin:8px 0 34px}
+.stagewrap{order:-1;min-width:0}
+@media (min-width:800px){.proj{grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);align-items:center}.stagewrap{order:0}}
+@media (min-width:800px){.proj.rev{grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr)}.proj.rev .stagewrap{order:-1}}
+.pinfo h3{margin:0 0 6px;font-size:clamp(1.5rem,5vw,2.1rem);font-weight:900;line-height:1.25}
+.pinfo .tag{display:inline-block;font-weight:700;font-size:.92rem;color:var(--on-teal);background:var(--teal);border-radius:999px;padding:1px 14px;margin-bottom:10px}
+.pinfo p{margin:0;color:var(--muted)}
+.specs{display:grid;grid-template-columns:auto 1fr;gap:6px 22px;margin:16px 0;padding:14px 18px;background:var(--card);border:2px solid var(--teal);border-radius:14px}
+.specs dt{color:var(--muted)}
+.specs dd{margin:0;font-weight:700;unicode-bidi:plaintext}
+.stage{position:relative;direction:ltr;aspect-ratio:1/1;border:3px solid var(--teal);border-radius:18px;overflow:hidden;background:#0d1a19;touch-action:pan-y}
+.slide{position:absolute;inset:0;opacity:0;transition:opacity 1.1s ease;pointer-events:none}
+.slide.on{opacity:1;z-index:1}
+.slide::before{content:"";position:absolute;inset:-30px;background:var(--bg) center/cover;filter:blur(26px) brightness(.75)}
+.slide img{position:relative;display:block;width:100%;height:100%;object-fit:contain}
+.slide.on img{animation:kb 9s ease-out forwards}
+@keyframes kb{from{transform:scale(1)}to{transform:scale(1.07)}}
+.zoom{all:unset;position:absolute;inset:0;z-index:2;cursor:zoom-in}
+.zoom:focus-visible{outline:3px solid var(--on-teal);outline-offset:-6px}
+.nav{all:unset;box-sizing:border-box;position:absolute;top:50%;z-index:3;width:44px;height:44px;margin-top:-22px;border-radius:50%;display:grid;place-items:center;font-size:1.7rem;line-height:1;background:rgba(10,21,20,.55);color:#fff;cursor:pointer}
+.nav:hover{background:rgba(10,21,20,.8)}
+.nav:focus-visible{outline:3px solid #fff;outline-offset:2px}
+.nav.prev{left:10px}.nav.next{right:10px}
+.count{position:absolute;right:12px;bottom:12px;z-index:3;padding:2px 12px;border-radius:999px;background:rgba(10,21,20,.6);color:#fff;font-size:.9rem;font-weight:700}
+.thumbs{position:relative;direction:ltr;display:flex;gap:8px;overflow-x:auto;padding:12px 2px 4px;scrollbar-width:thin}
+.thumbs button{all:unset;box-sizing:border-box;position:relative;flex:0 0 64px;height:64px;border-radius:10px;overflow:hidden;cursor:pointer;opacity:.6;border:2px solid transparent}
+.thumbs button.on{opacity:1;border-color:var(--teal)}
+.thumbs button:focus-visible{outline:3px solid var(--teal);outline-offset:2px}
+.thumbs img{display:block;width:100%;height:100%;object-fit:cover}
+.thumbs button::after{content:"";position:absolute;left:0;bottom:0;height:4px;width:0;background:var(--teal)}
+.proj.playing .thumbs button.on::after{animation:prog 5.5s linear forwards}
+@keyframes prog{from{width:0}to{width:100%}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.slide{transition:none}.slide.on img{animation:none}.proj.playing .thumbs button.on::after{animation:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top">
+    <span class="mark">AHMED AG</span>
+    <button class="lang" id="lang" type="button" aria-label="Switch language"><span class="ar">English</span><span class="en">عربي</span></button>
+  </div>
+  <header class="hero">
+    <h1 class="name"><span class="ar">أحمد عبد الجواد</span><span class="en">Ahmed Abd Elgawad</span></h1>
+    <p class="role"><span class="ar">مصمم جرافيك من السويس، خبرة أكتر من 9 سنين</span><span class="en">Graphic designer from Suez, 9+ years of experience</span></p>
+    <p class="sub"><span class="ar">هويات بصرية، تصميمات سوشيال ميديا، نقوش سيراميك وإعلانات. بشتغل على تفاصيل الشغل علشان يوصل رسالة البراند بوضوح.</span><span class="en">Brand identities, social media design, ceramic patterns and advertising. I sweat the details so your brand’s message lands clearly.</span></p>
+    <div class="cta">
+      <a class="btn wa" id="waTop" href="https://wa.me/201143725504" target="_blank" rel="noopener"><span class="ar">كلمني على واتساب</span><span class="en">Message me on WhatsApp</span></a>
+      <a class="btn pri" href="tel:+201143725504"><span class="ar">اتصل بي</span><span class="en">Call me</span></a>
+      <a class="btn" href="#contact"><span class="ar">كل طرق التواصل</span><span class="en">All contact options</span></a>
+    </div>
+  </header>
+</div>
+
+<section class="band"><div class="wrap">
+  <h2><span class="ar">اللي أقدر أعمله لك</span><span class="en">What I can do for you</span></h2>
+  <div class="svc">
+    <div><span class="ar">هوية بصرية ولوجو<small>ألوان وخطوط وتطبيقات كاملة للبراند</small></span><span class="en blk">Branding and logos<small>Colors, type and full brand applications</small></span></div>
+    <div><span class="ar">تصميم سوشيال ميديا<small>بوستات وحملات بشكل موحد</small></span><span class="en blk">Social media design<small>Posts and campaigns with one look</small></span></div>
+    <div><span class="ar">تصميم سيراميك ورخام<small>نقوش وكتالوجات للأسطح</small></span><span class="en blk">Ceramic and marble surfaces<small>Patterns and catalogues</small></span></div>
+    <div><span class="ar">إعلانات مطبوعة ورقمية<small>بوسترات ولوحات وكروت</small></span><span class="en blk">Print and digital ads<small>Posters, billboards and cards</small></span></div>
+  </div>
+</div></section>
+
+<section id="factory"><div class="wrap">
+  <h2><span class="ar">شغلي في سيراميكا جلامور</span><span class="en">My work at Ceramica Glamour</span></h2>
+  <p class="sub"><span class="ar">مدير قسم التصميمات ومدير إدارة المحتوى لصفحة المصنع، وبعمل تصميماته وبدير نشرها.</span><span class="en">Head of the design department and content manager of the factory’s page: I design its visuals and run what gets published.</span></p>
+  <div class="subh" id="walls"><h3><span class="ar">سيراميك الحوائط</span><span class="en">Wall tiles</span></h3><span class="dim"><bdi dir="ltr">30×60</bdi> <span class="ar">سم</span><span class="en">cm</span></span></div>
+  <article class="proj" data-title="Dream 128-Cararra">
+    <div class="pinfo">
+      <span class="tag"><span class="ar">أول مشروع عملته للمصنع</span><span class="en">My first project for the factory</span></span>
+      <h3>Dream 128-Cararra</h3>
+      <p><span class="ar">سيراميك حوائط بلمعة عالية. صممت له بوستر المنتج وصور التطبيق في الحمامات والمطابخ.</span><span class="en">A high-gloss wall tile. I designed its product poster and the room scenes showing it in bathrooms and kitchens.</span></p>
+      <dl class="specs">
+        <dt><span class="ar">المقاس</span><span class="en">Size</span></dt><dd><span class="ar"><bdi dir="ltr">30×60</bdi> سم</span><span class="en"><bdi dir="ltr">30×60</bdi> cm</span></dd>
+        <dt><span class="ar">الفنش</span><span class="en">Finish</span></dt><dd>High Glossy</dd>
+        <dt><span class="ar">السلسلة</span><span class="en">Series</span></dt><dd>Dream</dd>
+        <dt><span class="ar">الكود</span><span class="en">Code</span></dt><dd>128-Cararra</dd>
+      </dl>
+      <button class="btn" type="button" data-open><span class="ar">شوف الصور بحجم كبير</span><span class="en">View the images large</span></button>
+    </div>
+    <div class="stagewrap">
+      <div class="stage" role="group" aria-label="Dream 128-Cararra">
+        <div class="slide on" style="--bg:url(gallery/dream-1-t.jpg)" data-full="gallery/dream-1.jpg"><img src="gallery/dream-1.jpg" alt="Dream 128-Cararra, 1"></div>
+        <div class="slide" style="--bg:url(gallery/dream-2-t.jpg)" data-full="gallery/dream-2.jpg"><img data-src="gallery/dream-2.jpg" alt="Dream 128-Cararra, 2"></div>
+        <div class="slide" style="--bg:url(gallery/dream-3-t.jpg)" data-full="gallery/dream-3.jpg"><img data-src="gallery/dream-3.jpg" alt="Dream 128-Cararra, 3"></div>
+        <div class="slide" style="--bg:url(gallery/dream-4-t.jpg)" data-full="gallery/dream-4.jpg"><img data-src="gallery/dream-4.jpg" alt="Dream 128-Cararra, 4"></div>
+        <div class="slide" style="--bg:url(gallery/dream-5-t.jpg)" data-full="gallery/dream-5.jpg"><img data-src="gallery/dream-5.jpg" alt="Dream 128-Cararra, 5"></div>
+        <div class="slide" style="--bg:url(gallery/dream-6-t.jpg)" data-full="gallery/dream-6.jpg"><img data-src="gallery/dream-6.jpg" alt="Dream 128-Cararra, 6"></div>
+        <div class="slide" style="--bg:url(gallery/dream-7-t.jpg)" data-full="gallery/dream-7.jpg"><img data-src="gallery/dream-7.jpg" alt="Dream 128-Cararra, 7"></div>
+        <div class="slide" style="--bg:url(gallery/dream-8-t.jpg)" data-full="gallery/dream-8.jpg"><img data-src="gallery/dream-8.jpg" alt="Dream 128-Cararra, 8"></div>
+        <div class="slide" style="--bg:url(gallery/dream-9-t.jpg)" data-full="gallery/dream-9.jpg"><img data-src="gallery/dream-9.jpg" alt="Dream 128-Cararra, 9"></div>
+        <button class="zoom" type="button" aria-label="Open large"></button>
+        <button class="nav prev" type="button" aria-label="Previous">&#8249;</button>
+        <button class="nav next" type="button" aria-label="Next">&#8250;</button>
+        <span class="count" aria-live="off">1 / 9</span>
+      </div>
+      <div class="thumbs">
+        <button type="button" class="on" aria-label="1"><img src="gallery/dream-1-t.jpg" alt=""></button>
+        <button type="button" aria-label="2"><img src="gallery/dream-2-t.jpg" alt="" loading="lazy"></button>
+        <button type="button" aria-label="3"><img src="gallery/dream-3-t.jpg" alt="" loading="lazy"></button>
+        <button type="button" aria-label="4"><img src="gallery/dream-4-t.jpg" alt="" loading="lazy"></button>
+        <button type="button" aria-label="5"><img src="gallery/dream-5-t.jpg" alt="" loading="lazy"></button>
+        <button type="button" aria-label="6"><img src="gallery/dream-6-t.jpg" alt="" loading="lazy"></button>
+        <button type="button" aria-label="7"><img src="gallery/dream-7-t.jpg" alt="" loading="lazy"></button>
+        <button type="button" aria-label="8"><img src="gallery/dream-8-t.jpg" alt="" loading="lazy"></button>
+        <button type="button" aria-label="9"><img src="gallery/dream-9-t.jpg" alt="" loading="lazy"></button>
+      </div>
+    </div>
+  </article>
+  <article class="proj rev" data-title="Dream 130-Cararra">
+    <div class="pinfo">
+      <span class="tag"><span class="ar">تاني مشروع عملته للمصنع</span><span class="en">My second project for the factory</span></span>
+      <h3>Dream 130-Cararra</h3>
+      <p><span class="ar">تشكيلة حوائط بلمعة عالية بأكتر من ديكور: كرارا و MIX وديكور مطبخ. صممت بوستر التشكيلة وصور التطبيق في الحمامات والمطابخ.</span><span class="en">A high-gloss wall tile collection with several decors: Cararra, MIX and a kitchen decor. I designed the collection poster and the room scenes in bathrooms and kitchens.</span></p>
+      <dl class="specs">
+        <dt><span class="ar">المقاس</span><span class="en">Size</span></dt><dd><span class="ar"><bdi dir="ltr">30×60</bdi> سم</span><span class="en"><bdi dir="ltr">30×60</bdi> cm</span></dd>
+        <dt><span class="ar">الفنش</span><span class="en">Finish</span></dt><dd>High Glossy</dd>
+        <dt><span class="ar">السلسلة</span><span class="en">Series</span></dt><dd>Dream</dd>
+        <dt><span class="ar">الأكواد</span><span class="en">Codes</span></dt><dd><bdi dir="ltr">130-Cararra</bdi><br><bdi dir="ltr">130-MIX</bdi><br><bdi dir="ltr">130-Decor-Kit</bdi></dd>
+      </dl>
+      <button class="btn" type="button" data-open><span class="ar">شوف الصور بحجم كبير</span><span class="en">View the images large</span></button>
+    </div>
+    <div class="stagewrap">
+      <div class="stage" role="group" aria-label="Dream 130-Cararra">
+        <div class="slide on" style="--bg:url(gallery/dream130-1-t.jpg)" data-full="gallery/dream130-1.jpg"><img src="gallery/dream130-1.jpg" alt="Dream 130-Cararra, 1"></div>
+        <div class="slide" style="--bg:url(gallery/dream130-2-t.jpg)" data-full="gallery/dream130-2.jpg"><img data-src="gallery/dream130-2.jpg" alt="Dream 130-Cararra, 2"></div>
+        <div class="slide" style="--bg:url(gallery/dream130-3-t.jpg)" data-full="gallery/dream130-3.jpg"><img data-src="gallery/dream130-3.jpg" alt="Dream 130-Cararra, 3"></div>
+        <div class="slide" style="--bg:url(gallery/dream130-4-t.jpg)" data-full="gallery/dream130-4.jpg"><img data-src="gallery/dream130-4.jpg" alt="Dream 130-Cararra, 4"></div>
+        <div class="slide" style="--bg:url(gallery/dream130-5-t.jpg)" data-full="gallery/dream130-5.jpg"><img data-src="gallery/dream130-5.jpg" alt="Dream 130-Cararra, 5"></div>
+        <div class="slide" style="--bg:url(gallery/dream130-6-t.jpg)" data-full="gallery/dream130-6.jpg"><img data-src="gallery/dream130-6.jpg" alt="Dream 130-Cararra, 6"></div>
+        <button class="zoom" type="button" aria-label="Open large"></button>
+        <button class="nav prev" type="button" aria-label="Previous">&#8249;</button>
+        <button class="nav next" type="button" aria-label="Next">&#8250;</button>
+        <span class="count" aria-live="off">1 / 6</span>
+      </div>
+      <div class="thumbs">
+        <button type="button" class="on" aria-label="1"><img src="gallery/dream130-1-t.jpg" alt=""></button>
+        <button type="button" aria-label="2"><img src="gallery/dream130-2-t.jpg" alt="" loading="lazy"></button>
+        <button type="button" aria-label="3"><img src="gallery/dream130-3-t.jpg" alt="" loading="lazy"></button>
+        <button type="button" aria-label="4"><img src="gallery/dream130-4-t.jpg" alt="" loading="lazy"></button>
+        <button type="button" aria-label="5"><img src="gallery/dream130-5-t.jpg" alt="" loading="lazy"></button>
+        <button type="button" aria-label="6"><img src="gallery/dream130-6-t.jpg" alt="" loading="lazy"></button>
+      </div>
+    </div>
+  </article>
+  <article class="proj" data-title="Dream 139-Cararra">
+    <div class="pinfo">
+      <span class="tag"><span class="ar">تالت مشروع عملته للمصنع</span><span class="en">My third project for the factory</span></span>
+      <h3>Dream 139-Cararra</h3>
+      <p><span class="ar">سيراميك حوائط بلمعة عالية وعروق دهبية، معاه ديكورات للمطبخ والحمام. صممت بوستر المنتج وصور التطبيق.</span><span class="en">A high-gloss wall tile with golden veins, with decors for kitchens and bathrooms. I designed the product poster and the room scenes.</span></p>
+      <dl class="specs">
+        <dt><span class="ar">المقاس</span><span class="en">Size</span></dt><dd><span class="ar"><bdi dir="ltr">30×60</bdi> سم</span><span class="en"><bdi dir="ltr">30×60</bdi> cm</span></dd>
+        <dt><span class="ar">الفنش</span><span class="en">Finish</span></dt><dd>High Glossy</dd>
+        <dt><span class="ar">السلسلة</span><span class="en">Series</span></dt><dd>Dream</dd>
+        <dt><span class="ar">الكود</span><span class="en">Code</span></dt><dd>139-Cararra</dd>
+      </dl>
+      <button class="btn" type="button" data-open><span class="ar">شوف الصور بحجم كبير</span><span class="en">View the images large</span></button>
+    </div>
+    <div class="stagewrap">
+      <div class="stage" role="group" aria-label="Dream 139-Cararra">
+        <div class="slide on" style="--bg:url(gallery/dream139-1-t.jpg)" data-full="gallery/dream139-1.jpg"><img src="gallery/dream139-1.jpg" alt="Dream 139-Cararra, 1"></div>
+        <div class="slide" style="--bg:url(gallery/dream139-2-t.jpg)" data-full="gallery/dream139-2.jpg"><img data-src="gallery/dream139-2.jpg" alt="Dream 139-Cararra, 2"></div>
+        <div class="slide" style="--bg:url(gallery/dream139-3-t.jpg)" data-full="gallery/dream139-3.jpg"><img data-src="gallery/dream139-3.jpg" alt="Dream 139-Cararra, 3"></div>
+        <div class="slide" style="--bg:url(gallery/dream139-4-t.jpg)" data-full="gallery/dream139-4.jpg"><img data-src="gallery/dream139-4.jpg" alt="Dream 139-Cararra, 4"></div>
+        <div class="slide" style="--bg:url(gallery/dream139-5-t.jpg)" data-full="gallery/dream139-5.jpg"><img data-src="gallery/dream139-5.jpg" alt="Dream 139-Cararra, 5"></div>
+        <button class="zoom" type="button" aria-label="Open large"></button>
+        <button class="nav prev" type="button" aria-label="Previous">&#8249;</button>
+        <button class="nav next" type="button" aria-label="Next">&#8250;</button>
+        <span class="count" aria-live="off">1 / 5</span>
+      </div>
+      <div class="thumbs">
+        <button type="button" class="on" aria-label="1"><img src="gallery/dream139-1-t.jpg" alt=""></button>
+        <button type="button" aria-label="2"><img src="gallery/dream139-2-t.jpg" alt="" loading="lazy"></button>
+        <button type="button" aria-label="3"><img src="gallery/dream139-3-t.jpg" alt="" loading="lazy"></button>
+        <button type="button" aria-label="4"><img src="gallery/dream139-4-t.jpg" alt="" loading="lazy"></button>
+        <button type="button" aria-label="5"><img src="gallery/dream139-5-t.jpg" alt="" loading="lazy"></button>
+      </div>
+    </div>
+  </article>
+  <article class="proj rev" data-title="Dream 141-Grey">
+    <div class="pinfo">
+      <span class="tag"><span class="ar">رابع مشروع عملته للمصنع</span><span class="en">My fourth project for the factory</span></span>
+      <h3>Dream 141-Grey</h3>
+      <p><span class="ar">تشكيلة حوائط بلمعة عالية وعروق دهبية، فيها ديكورات للمطبخ والحمام وقطعة MIX. صممت بوستر المنتج وصور التطبيق.</span><span class="en">A high-gloss wall tile collection with golden veins, with kitchen and bathroom decors and a MIX piece. I designed the product poster and the room scenes.</span></p>
+      <dl class="specs">
+        <dt><span class="ar">المقاس</span><span class="en">Size</span></dt><dd><span class="ar"><bdi dir="ltr">30×60</bdi> سم</span><span class="en"><bdi dir="ltr">30×60</bdi> cm</span></dd>
+        <dt><span class="ar">الفنش</span><span class="en">Finish</span></dt><dd>High Glossy</dd>
+        <dt><span class="ar">السلسلة</span><span class="en">Series</span></dt><dd>Dream</dd>
+        <dt><span class="ar">الأكواد</span><span class="en">Codes</span></dt><dd><bdi dir="ltr">141-Grey</bdi><br><bdi dir="ltr">141-Mix</bdi><br><bdi dir="ltr">141-Decor-Kit</bdi><br><bdi dir="ltr">141-Decor-Bath</bdi></dd>
+      </dl>
+      <button class="btn" type="button" data-open><span class="ar">شوف الصور بحجم كبير</span><span class="en">View the images large</span></button>
+    </div>
+    <div class="stagewrap">
+      <div class="stage" role="group" aria-label="Dream 141-Grey">
+        <div class="slide on" style="--bg:url(gallery/dream141-1-t.jpg)" data-full="gallery/dream141-1.jpg"><img src="gallery/dream141-1.jpg" alt="Dream 141-Grey, 1"></div>
+        <div class="slide" style="--bg:url(gallery/dream141-2-t.jpg)" data-full="gallery/dream141-2.jpg"><img data-src="gallery/dream141-2.jpg" alt="Dream 141-Grey, 2"></div>
+        <div class="slide" style="--bg:url(gallery/dream141-3-t.jpg)" data-full="gallery/dream141-3.jpg"><img data-src="gallery/dream141-3.jpg" alt="Dream 141-Grey, 3"></div>
+        <div class="slide" style="--bg:url(gallery/dream141-4-t.jpg)" data-full="gallery/dream141-4.jpg"><img data-src="gallery/dream141-4.jpg" alt="Dream 141-Grey, 4"></div>
+        <div class="slide" style="--bg:url(gallery/dream141-5-t.jpg)" data-full="gallery/dream141-5.jpg"><img data-src="gallery/dream141-5.jpg" alt="Dream 141-Grey, 5"></div>
+        <div class="slide" style="--bg:url(gallery/dream141-6-t.jpg)" data-full="gallery/dream141-6.jpg"><img data-src="gallery/dream141-6.jpg" alt="Dream 141-Grey, 6"></div>
+        <div class="slide" style="--bg:url(gallery/dream141-7-t.jpg)" data-full="gallery/dream141-7.jpg"><img data-src="gallery/dream141-7.jpg" alt="Dream 141-Grey, 7"></div>
+        <div class="slide" style="--bg:url(gallery/dream141-8-t.jpg)" data-full="gallery/dream141-8.jpg"><img data-src="gallery/dream141-8.jpg" alt="Dream 141-Grey, 8"></div>
+        <button class="zoom" type="button" aria-label="Open large"></button>
+        <button class="nav prev" type="button" aria-label="Previous">&#8249;</button>
+        <button class="nav next" type="button" aria-label="Next">&#8250;</button>
+        <span class="count" aria-live="off">1 / 8</span>
+      </div>
+      <div class="thumbs">
+        <button type="button" class="on" aria-label="1"><img src="gallery/dream141-1-t.jpg" alt=""></button>
+        <button type="button" aria-label="2"><img src="gallery/dream141-2-t.jpg" alt="" loading="lazy"></button>
+        <button type="button" aria-label="3"><img src="gallery/dream141-3-t.jpg" alt="" loading="lazy"></button>
+        <button type="button" aria-label="4"><img src="gallery/dream141-4-t.jpg" alt="" loading="lazy"></button>
+        <button type="button" aria-label="5"><img src="gallery/dream141-5-t.jpg" alt="" loading="lazy"></button>
+        <button type="button" aria-label="6"><img src="gallery/dream141-6-t.jpg" alt="" loading="lazy"></button>
+        <button type="button" aria-label="7"><img src="gallery/dream141-7-t.jpg" alt="" loading="lazy"></button>
+        <button type="button" aria-label="8"><img src="gallery/dream141-8-t.jpg" alt="" loading="lazy"></button>
+      </div>
+    </div>
+  </article>
+  <article class="proj" data-title="Dream 142-Cararra">
+    <div class="pinfo">
+      <span class="tag"><span class="ar">خامس مشروع عملته للمصنع</span><span class="en">My fifth project for the factory</span></span>
+      <h3>Dream 142-Cararra</h3>
+      <p><span class="ar">تشكيلة حوائط بلمعة عالية بدرجتين، أبيض بعروق دهبية وأسود، مع MIX وديكورات للمطبخ والحمام. صممت بوستر المنتج وصور التطبيق.</span><span class="en">A high-gloss wall tile collection in two tones, white with golden veins and black, with a MIX piece and kitchen and bathroom decors. I designed the product poster and the room scenes.</span></p>
+      <dl class="specs">
+        <dt><span class="ar">المقاس</span><span class="en">Size</span></dt><dd><span class="ar"><bdi dir="ltr">30×60</bdi> سم</span><span class="en"><bdi dir="ltr">30×60</bdi> cm</span></dd>
+        <dt><span class="ar">الفنش</span><span class="en">Finish</span></dt><dd>High Glossy</dd>
+        <dt><span class="ar">السلسلة</span><span class="en">Series</span></dt><dd>Dream</dd>
+        <dt><span class="ar">الأكواد</span><span class="en">Codes</span></dt><dd><bdi dir="ltr">142-Cararra</bdi><br><bdi dir="ltr">142-Black</bdi><br><bdi dir="ltr">142-MIX</bdi><br><bdi dir="ltr">142-Decor-Kit</bdi><br><bdi dir="ltr">142-Decor-Bath</bdi></dd>
+      </dl>
+      <button class="btn" type="button" data-open><span class="ar">شوف الصور بحجم كبير</span><span class="en">View the images large</span></button>
+    </div>
+    <div class="stagewrap">
+      <div class="stage" role="group" aria-label="Dream 142-Cararra">
+        <div class="slide on" style="--bg:url(gallery/dream142-1-t.jpg)" data-full="gallery/dream142-1.jpg"><img src="gallery/dream142-1.jpg" alt="Dream 142-Cararra, 1"></div>
+        <div class="slide" style="--bg:url(gallery/dream142-2-t.jpg)" data-full="gallery/dream142-2.jpg"><img data-src="gallery/dream142-2.jpg" alt="Dream 142-Cararra, 2"></div>
+        <div class="slide" style="--bg:url(gallery/dream142-3-t.jpg)" data-full="gallery/dream142-3.jpg"><img data-src="gallery/dream142-3.jpg" alt="Dream 142-Cararra, 3"></div>
+        <div class="slide" style="--bg:url(gallery/dream142-4-t.jpg)" data-full="gallery/dream142-4.jpg"><img data-src="gallery/dream142-4.jpg" alt="Dream 142-Cararra, 4"></div>
+        <div class="slide" style="--bg:url(gallery/dream142-5-t.jpg)" data-full="gallery/dream142-5.jpg"><img data-src="gallery/dream142-5.jpg" alt="Dream 142-Cararra, 5"></div>
+        <div class="slide" style="--bg:url(gallery/dream142-6-t.jpg)" data-full="gallery/dream142-6.jpg"><img data-src="gallery/dream142-6.jpg" alt="Dream 142-Cararra, 6"></div>
+        <div class="slide" style="--bg:url(gallery/dream142-7-t.jpg)" data-full="gallery/dream142-7.jpg"><img data-src="gallery/dream142-7.jpg" alt="Dream 142-Cararra, 7"></div>
+        <button class="zoom" type="button" aria-label="Open large"></button>
+        <button class="nav prev" type="button" aria-label="Previous">&#8249;</button>
+        <button class="nav next" type="button" aria-label="Next">&#8250;</button>
+        <span class="count" aria-live="off">1 / 7</span>
+      </div>
+      <div class="thumbs">
+        <button type="button" class="on" aria-label="1"><img src="gallery/dream142-1-t.jpg" alt=""></button>
+        <button type="button" aria-label="2"><img src="gallery/dream142-2-t.jpg" alt="" loading="lazy"></button>
+        <button type="button" aria-label="3"><img src="gallery/dream142-3-t.jpg" alt="" loading="lazy"></button>
+        <button type="button" aria-label="4"><img src="gallery/dream142-4-t.jpg" alt="" loading="lazy"></button>
+        <button type="button" aria-label="5"><img src="gallery/dream142-5-t.jpg" alt="" loading="lazy"></button>
+        <button type="button" aria-label="6"><img src="gallery/dream142-6-t.jpg" alt="" loading="lazy"></button>
+        <button type="button" aria-label="7"><img src="gallery/dream142-7-t.jpg" alt="" loading="lazy"></button>
+      </div>
+    </div>
+  </article>
+  <article class="proj rev" data-title="Dream 152-Grey">
+    <div class="pinfo">
+      <span class="tag"><span class="ar">سادس مشروع عملته للمصنع</span><span class="en">My sixth project for the factory</span></span>
+      <h3>Dream 152-Grey</h3>
+      <p><span class="ar">تشكيلة حوائط بلمعة عالية بدرجتين، رمادي وكرارا بعروق ناعمة، مع MIX ثلاثي الأبعاد وديكورات للمطبخ والحمام. صممت بوستر المنتج وصور التطبيق.</span><span class="en">A high-gloss wall tile collection in grey and carrara with soft veining, with a 3D MIX piece and kitchen and bathroom decors. I designed the product poster and the room scenes.</span></p>
+      <dl class="specs">
+        <dt><span class="ar">المقاس</span><span class="en">Size</span></dt><dd><span class="ar"><bdi dir="ltr">30×60</bdi> سم</span><span class="en"><bdi dir="ltr">30×60</bdi> cm</span></dd>
+        <dt><span class="ar">الفنش</span><span class="en">Finish</span></dt><dd>High Glossy</dd>
+        <dt><span class="ar">السلسلة</span><span class="en">Series</span></dt><dd>Dream</dd>
+        <dt><span class="ar">الأكواد</span><span class="en">Codes</span></dt><dd><bdi dir="ltr">152-Grey</bdi><br><bdi dir="ltr">152-Cararra</bdi><br><bdi dir="ltr">152-MIX</bdi><br><bdi dir="ltr">152-Decor-Kit</bdi><br><bdi dir="ltr">152-Decor-Bath</bdi></dd>
+      </dl>
+      <button class="btn" type="button" data-open><span class="ar">شوف الصور بحجم كبير</span><span class="en">View the images large</span></button>
+    </div>
+    <div class="stagewrap">
+      <div class="stage" role="group" aria-label="Dream 152-Grey">
+        <div class="slide on" style="--bg:url(gallery/dream152-1-t.jpg)" data-full="gallery/dream152-1.jpg"><img src="gallery/dream152-1.jpg" alt="Dream 152-Grey, 1"></div>
+        <div class="slide" style="--bg:url(gallery/dream152-2-t.jpg)" data-full="gallery/dream152-2.jpg"><img data-src="gallery/dream152-2.jpg" alt="Dream 152-Grey, 2"></div>
+        <div class="slide" style="--bg:url(gallery/dream152-3-t.jpg)" data-full="gallery/dream152-3.jpg"><img data-src="gallery/dream152-3.jpg" alt="Dream 152-Grey, 3"></div>
+        <div class="slide" style="--bg:url(gallery/dream152-4-t.jpg)" data-full="gallery/dream152-4.jpg"><img data-src="gallery/dream152-4.jpg" alt="Dream 152-Grey, 4"></div>
+        <div class="slide" style="--bg:url(gallery/dream152-5-t.jpg)" data-full="gallery/dream152-5.jpg"><img data-src="gallery/dream152-5.jpg" alt="Dream 152-Grey, 5"></div>
+        <div class="slide" style="--bg:url(gallery/dream152-6-t.jpg)" data-full="gallery/dream152-6.jpg"><img data-src="gallery/dream152-6.jpg" alt="Dream 152-Grey, 6"></div>
+        <div class="slide" style="--bg:url(gallery/dream152-7-t.jpg)" data-full="gallery/dream152-7.jpg"><img data-src="gallery/dream152-7.jpg" alt="Dream 152-Grey, 7"></div>
+        <button class="zoom" type="button" aria-label="Open large"></button>
+        <button class="nav prev" type="button" aria-label="Previous">&#8249;</button>
+        <button class="nav next" type="button" aria-label="Next">&#8250;</button>
+        <span class="count" aria-live="off">1 / 7</span>
+      </div>
+      <div class="thumbs">
+        <button type="button" class="on" aria-label="1"><img src="gallery/dream152-1-t.jpg" alt=""></button>
+        <button type="button" aria-label="2"><img src="gallery/dream152-2-t.jpg" alt="" loading="lazy"></button>
+        <button type="button" aria-label="3"><img src="gallery/dream152-3-t.jpg" alt="" loading="lazy"></button>
+        <button type="button" aria-label="4"><img src="gallery/dream152-4-t.jpg" alt="" loading="lazy"></button>
+        <button type="button" aria-label="5"><img src="gallery/dream152-5-t.jpg" alt="" loading="lazy"></button>
+        <button type="button" aria-label="6"><img src="gallery/dream152-6-t.jpg" alt="" loading="lazy"></button>
+        <button type="button" aria-label="7"><img src="gallery/dream152-7-t.jpg" alt="" loading="lazy"></button>
+      </div>
+    </div>
+  </article>
+  <article class="proj" data-title="Dream 154-Onyx">
+    <div class="pinfo">
+      <span class="tag"><span class="ar">سابع مشروع عملته للمصنع</span><span class="en">My seventh project for the factory</span></span>
+      <h3>Dream 154-Onyx</h3>
+      <p><span class="ar">حوائط أونيكس بلمعة عالية وعروق هادية، مع ديكورات للمطبخ والحمام. الفكرة: "مش كل فخامة تحتاج تفاصيل كتيرة... أحيانًا البساطة هي عنوانها". صممت بوستر المنتج وصور التطبيق.</span><span class="en">High-gloss onyx wall tiles with calm veining, with kitchen and bathroom decors. The idea: luxury doesn't need many details, sometimes simplicity is its title. I designed the product poster and the room scenes.</span></p>
+      <dl class="specs">
+        <dt><span class="ar">المقاس</span><span class="en">Size</span></dt><dd><span class="ar"><bdi dir="ltr">30×60</bdi> سم</span><span class="en"><bdi dir="ltr">30×60</bdi> cm</span></dd>
+        <dt><span class="ar">الفنش</span><span class="en">Finish</span></dt><dd>High Glossy</dd>
+        <dt><span class="ar">السلسلة</span><span class="en">Series</span></dt><dd>Dream</dd>
+        <dt><span class="ar">الكود</span><span class="en">Code</span></dt><dd><bdi dir="ltr">154-Onyx</bdi></dd>
+      </dl>
+      <button class="btn" type="button" data-open><span class="ar">شوف الصور بحجم كبير</span><span class="en">View the images large</span></button>
+    </div>
+    <div class="stagewrap">
+      <div class="stage" role="group" aria-label="Dream 154-Onyx">
+        <div class="slide on" style="--bg:url(gallery/dream154-1-t.jpg)" data-full="gallery/dream154-1.jpg"><img src="gallery/dream154-1.jpg" alt="Dream 154-Onyx, 1"></div>
+        <div class="slide" style="--bg:url(gallery/dream154-2-t.jpg)" data-full="gallery/dream154-2.jpg"><img data-src="gallery/dream154-2.jpg" alt="Dream 154-Onyx, 2"></div>
+        <div class="slide" style="--bg:url(gallery/dream154-3-t.jpg)" data-full="gallery/dream154-3.jpg"><img data-src="gallery/dream154-3.jpg" alt="Dream 154-Onyx, 3"></div>
+        <div class="slide" style="--bg:url(gallery/dream154-4-t.jpg)" data-full="gallery/dream154-4.jpg"><img data-src="gallery/dream154-4.jpg" alt="Dream 154-Onyx, 4"></div>
+        <div class="slide" style="--bg:url(gallery/dream154-5-t.jpg)" data-full="gallery/dream154-5.jpg"><img data-src="gallery/dream154-5.jpg" alt="Dream 154-Onyx, 5"></div>
+        <div class="slide" style="--bg:url(gallery/dream154-6-t.jpg)" data-full="gallery/dream154-6.jpg"><img data-src="gallery/dream154-6.jpg" alt="Dream 154-Onyx, 6"></div>
+        <button class="zoom" type="button" aria-label="Open large"></button>
+        <button class="nav prev" type="button" aria-label="Previous">&#8249;</button>
+        <button class="nav next" type="button" aria-label="Next">&#8250;</button>
+        <span class="count" aria-live="off">1 / 6</span>
+      </div>
+      <div class="thumbs">
+        <button type="button" class="on" aria-label="1"><img src="gallery/dream154-1-t.jpg" alt=""></button>
+        <button type="button" aria-label="2"><img src="gallery/dream154-2-t.jpg" alt="" loading="lazy"></button>
+        <button type="button" aria-label="3"><img src="gallery/dream154-3-t.jpg" alt="" loading="lazy"></button>
+        <button type="button" aria-label="4"><img src="gallery/dream154-4-t.jpg" alt="" loading="lazy"></button>
+        <button type="button" aria-label="5"><img src="gallery/dream154-5-t.jpg" alt="" loading="lazy"></button>
+        <button type="button" aria-label="6"><img src="gallery/dream154-6-t.jpg" alt="" loading="lazy"></button>
+      </div>
+    </div>
+  </article>
+  <article class="proj rev" data-title="Dream 157-Light Beige">
+    <div class="pinfo">
+      <span class="tag"><span class="ar">ثامن مشروع عملته للمصنع</span><span class="en">My eighth project for the factory</span></span>
+      <h3>Dream 157-Light Beige</h3>
+      <p><span class="ar">حوائط بيج فاتح بلمعة عالية وعروق ناعمة، مع MIX وديكور للمطبخ. الفكرة: "لون هادي... وحضور مختلف". صممت بوستر المنتج وصور التطبيق.</span><span class="en">High-gloss light beige wall tiles with soft veining, with a MIX piece and a kitchen decor. The idea: a calm color with a different presence. I designed the product poster and the room scenes.</span></p>
+      <dl class="specs">
+        <dt><span class="ar">المقاس</span><span class="en">Size</span></dt><dd><span class="ar"><bdi dir="ltr">30×60</bdi> سم</span><span class="en"><bdi dir="ltr">30×60</bdi> cm</span></dd>
+        <dt><span class="ar">الفنش</span><span class="en">Finish</span></dt><dd>High Glossy</dd>
+        <dt><span class="ar">السلسلة</span><span class="en">Series</span></dt><dd>Dream</dd>
+        <dt><span class="ar">الأكواد</span><span class="en">Codes</span></dt><dd><bdi dir="ltr">157-Light Beige</bdi><br><bdi dir="ltr">157-Decor-Kit</bdi><br><bdi dir="ltr">157-MIX</bdi></dd>
+      </dl>
+      <button class="btn" type="button" data-open><span class="ar">شوف الصور بحجم كبير</span><span class="en">View the images large</span></button>
+    </div>
+    <div class="stagewrap">
+      <div class="stage" role="group" aria-label="Dream 157-Light Beige">
+        <div class="slide on" style="--bg:url(gallery/dream157-1-t.jpg)" data-full="gallery/dream157-1.jpg"><img src="gallery/dream157-1.jpg" alt="Dream 157-Light Beige, 1"></div>
+        <div class="slide" style="--bg:url(gallery/dream157-2-t.jpg)" data-full="gallery/dream157-2.jpg"><img data-src="gallery/dream157-2.jpg" alt="Dream 157-Light Beige, 2"></div>
+        <div class="slide" style="--bg:url(gallery/dream157-3-t.jpg)" data-full="gallery/dream157-3.jpg"><img data-src="gallery/dream157-3.jpg" alt="Dream 157-Light Beige, 3"></div>
+        <div class="slide" style="--bg:url(gallery/dream157-4-t.jpg)" data-full="gallery/dream157-4.jpg"><img data-src="gallery/dream157-4.jpg" alt="Dream 157-Light Beige, 4"></div>
+        <div class="slide" style="--bg:url(gallery/dream157-5-t.jpg)" data-full="gallery/dream157-5.jpg"><img data-src="gallery/dream157-5.jpg" alt="Dream 157-Light Beige, 5"></div>
+        <div class="slide" style="--bg:url(gallery/dream157-6-t.jpg)" data-full="gallery/dream157-6.jpg"><img data-src="gallery/dream157-6.jpg" alt="Dream 157-Light Beige, 6"></div>
+        <button class="zoom" type="button" aria-label="Open large"></button>
+        <button class="nav prev" type="button" aria-label="Previous">&#8249;</button>
+        <button class="nav next" type="button" aria-label="Next">&#8250;</button>
+        <span class="count" aria-live="off">1 / 6</span>
+      </div>
+      <div class="thumbs">
+        <button type="button" class="on" aria-label="1"><img src="gallery/dream157-1-t.jpg" alt=""></button>
+        <button type="button" aria-label="2"><img src="gallery/dream157-2-t.jpg" alt="" loading="lazy"></button>
+        <button type="button" aria-label="3"><img src="gallery/dream157-3-t.jpg" alt="" loading="lazy"></button>
+        <button type="button" aria-label="4"><img src="gallery/dream157-4-t.jpg" alt="" loading="lazy"></button>
+        <button type="button" aria-label="5"><img src="gallery/dream157-5-t.jpg" alt="" loading="lazy"></button>
+        <button type="button" aria-label="6"><img src="gallery/dream157-6-t.jpg" alt="" loading="lazy"></button>
+      </div>
+    </div>
+  </article>
+  <article class="proj" data-title="Dream 158-Onyx">
+    <div class="pinfo">
+      <span class="tag"><span class="ar">تاسع مشروع عملته للمصنع</span><span class="en">My ninth project for the factory</span></span>
+      <h3>Dream 158-Onyx</h3>
+      <p><span class="ar">حوائط أونيكس بلمعة عالية وعروق دهبية دافية، مع MIX وديكورات للمطبخ والحمام. صممت بوستر المنتج وصور التطبيق.</span><span class="en">High-gloss onyx wall tiles with warm golden veining, with a MIX piece and kitchen and bathroom decors. I designed the product poster and the room scenes.</span></p>
+      <dl class="specs">
+        <dt><span class="ar">المقاس</span><span class="en">Size</span></dt><dd><span class="ar"><bdi dir="ltr">30×60</bdi> سم</span><span class="en"><bdi dir="ltr">30×60</bdi> cm</span></dd>
+        <dt><span class="ar">الفنش</span><span class="en">Finish</span></dt><dd>High Glossy</dd>
+        <dt><span class="ar">السلسلة</span><span class="en">Series</span></dt><dd>Dream</dd>
+        <dt><span class="ar">الأكواد</span><span class="en">Codes</span></dt><dd><bdi dir="ltr">158-Onyx</bdi><br><bdi dir="ltr">158-Mix</bdi><br><bdi dir="ltr">158-Decor-Kit</bdi><br><bdi dir="ltr">158-Decor-Bath</bdi></dd>
+      </dl>
+      <button class="btn" type="button" data-open><span class="ar">شوف الصور بحجم كبير</span><span class="en">View the images large</span></button>
+    </div>
+    <div class="stagewrap">
+      <div class="stage" role="group" aria-label="Dream 158-Onyx">
+        <div class="slide on" style="--bg:url(gallery/dream158-1-t.jpg)" data-full="gallery/dream158-1.jpg"><img src="gallery/dream158-1.jpg" alt="Dream 158-Onyx, 1"></div>
+        <div class="slide" style="--bg:url(gallery/dream158-2-t.jpg)" data-full="gallery/dream158-2.jpg"><img data-src="gallery/dream158-2.jpg" alt="Dream 158-Onyx, 2"></div>
+        <div class="slide" style="--bg:url(gallery/dream158-3-t.jpg)" data-full="gallery/dream158-3.jpg"><img data-src="gallery/dream158-3.jpg" alt="Dream 158-Onyx, 3"></div>
+        <div class="slide" style="--bg:url(gallery/dream158-4-t.jpg)" data-full="gallery/dream158-4.jpg"><img data-src="gallery/dream158-4.jpg" alt="Dream 158-Onyx, 4"></div>
+        <div class="slide" style="--bg:url(gallery/dream158-5-t.jpg)" data-full="gallery/dream158-5.jpg"><img data-src="gallery/dream158-5.jpg" alt="Dream 158-Onyx, 5"></div>
+        <div class="slide" style="--bg:url(gallery/dream158-6-t.jpg)" data-full="gallery/dream158-6.jpg"><img data-src="gallery/dream158-6.jpg" alt="Dream 158-Onyx, 6"></div>
+        <div class="slide" style="--bg:url(gallery/dream158-7-t.jpg)" data-full="gallery/dream158-7.jpg"><img data-src="gallery/dream158-7.jpg" alt="Dream 158-Onyx, 7"></div>
+        <button class="zoom" type="button" aria-label="Open large"></button>
+        <button class="nav prev" type="button" aria-label="Previous">&#8249;</button>
+        <button class="nav next" type="button" aria-label="Next">&#8250;</button>
+        <span class="count" aria-live="off">1 / 7</span>
+      </div>
+      <div class="thumbs">
+        <button type="button" class="on" aria-label="1"><img src="gallery/dream158-1-t.jpg" alt=""></button>
+        <button type="button" aria-label="2"><img src="gallery/dream158-2-t.jpg" alt="" loading="lazy"></button>
+        <button type="button" aria-label="3"><img src="gallery/dream158-3-t.jpg" alt="" loading="lazy"></button>
+        <button type="button" aria-label="4"><img src="gallery/dream158-4-t.jpg" alt="" loading="lazy"></button>
+        <button type="button" aria-label="5"><img src="gallery/dream158-5-t.jpg" alt="" loading="lazy"></button>
+        <button type="button" aria-label="6"><img src="gallery/dream158-6-t.jpg" alt="" loading="lazy"></button>
+        <button type="button" aria-label="7"><img src="gallery/dream158-7-t.jpg" alt="" loading="lazy"></button>
+      </div>
+    </div>
+  </article>
+  <div class="subh" id="floors"><h3><span class="ar">سيراميك الأرضيات</span><span class="en">Floor tiles</span></h3><span class="dim"><bdi dir="ltr">60×60</bdi> <span class="ar">سم</span><span class="en">cm</span></span></div>
+  <article class="proj" data-title="GOLD-186-Halaib">
+    <div class="pinfo">
+      <span class="tag"><span class="ar">أول تصميم أرضيات للمصنع</span><span class="en">My first floor tile design for the factory</span></span>
+      <h3>GOLD-186-Halaib</h3>
+      <p><span class="ar">أرضية بلمعة عالية وتأثير الجرانيت المنقط بالأبيض والأسود والرمادي. صممت بوستر المنتج وصور التطبيق في المعيشة والصالات.</span><span class="en">A high-gloss floor tile with a speckled granite look in white, black and grey. I designed the product poster and the living-space scenes.</span></p>
+      <dl class="specs">
+        <dt><span class="ar">المقاس</span><span class="en">Size</span></dt><dd><span class="ar"><bdi dir="ltr">60×60</bdi> سم</span><span class="en"><bdi dir="ltr">60×60</bdi> cm</span></dd>
+        <dt><span class="ar">الفنش</span><span class="en">Finish</span></dt><dd>High Glossy</dd>
+        <dt><span class="ar">السلسلة</span><span class="en">Series</span></dt><dd>GOLD</dd>
+        <dt><span class="ar">الكود</span><span class="en">Code</span></dt><dd><bdi dir="ltr">186-Halaib</bdi></dd>
+      </dl>
+      <button class="btn" type="button" data-open><span class="ar">شوف الصور بحجم كبير</span><span class="en">View the images large</span></button>
+    </div>
+    <div class="stagewrap">
+      <div class="stage" role="group" aria-label="GOLD-186-Halaib">
+        <div class="slide on" style="--bg:url(gallery/gold186-1-t.jpg)" data-full="gallery/gold186-1.jpg"><img src="gallery/gold186-1.jpg" alt="GOLD-186-Halaib, 1"></div>
+        <div class="slide" style="--bg:url(gallery/gold186-2-t.jpg)" data-full="gallery/gold186-2.jpg"><img data-src="gallery/gold186-2.jpg" alt="GOLD-186-Halaib, 2"></div>
+        <div class="slide" style="--bg:url(gallery/gold186-3-t.jpg)" data-full="gallery/gold186-3.jpg"><img data-src="gallery/gold186-3.jpg" alt="GOLD-186-Halaib, 3"></div>
+        <div class="slide" style="--bg:url(gallery/gold186-4-t.jpg)" data-full="gallery/gold186-4.jpg"><img data-src="gallery/gold186-4.jpg" alt="GOLD-186-Halaib, 4"></div>
+        <button class="zoom" type="button" aria-label="Open large"></button>
+        <button class="nav prev" type="button" aria-label="Previous">&#8249;</button>
+        <button class="nav next" type="button" aria-label="Next">&#8250;</button>
+        <span class="count" aria-live="off">1 / 4</span>
+      </div>
+      <div class="thumbs">
+        <button type="button" class="on" aria-label="1"><img src="gallery/gold186-1-t.jpg" alt=""></button>
+        <button type="button" aria-label="2"><img src="gallery/gold186-2-t.jpg" alt="" loading="lazy"></button>
+        <button type="button" aria-label="3"><img src="gallery/gold186-3-t.jpg" alt="" loading="lazy"></button>
+        <button type="button" aria-label="4"><img src="gallery/gold186-4-t.jpg" alt="" loading="lazy"></button>
+      </div>
+    </div>
+  </article>
+  <article class="proj rev" data-title="GOLD-225-Onyx">
+    <div class="pinfo">
+      <span class="tag"><span class="ar">تاني تصميم أرضيات للمصنع</span><span class="en">My second floor tile design for the factory</span></span>
+      <h3>GOLD-225-Onyx</h3>
+      <p><span class="ar">أرضية أونيكس أبيض بلمعة عالية وعروق ناعمة جدًا. صممت بوستر المنتج وصور التطبيق في الصالات الواسعة.</span><span class="en">A high-gloss white onyx floor tile with very soft veining. I designed the product poster and the spacious living-room scenes.</span></p>
+      <dl class="specs">
+        <dt><span class="ar">المقاس</span><span class="en">Size</span></dt><dd><span class="ar"><bdi dir="ltr">60×60</bdi> سم</span><span class="en"><bdi dir="ltr">60×60</bdi> cm</span></dd>
+        <dt><span class="ar">الفنش</span><span class="en">Finish</span></dt><dd>High Glossy</dd>
+        <dt><span class="ar">السلسلة</span><span class="en">Series</span></dt><dd>GOLD</dd>
+        <dt><span class="ar">الكود</span><span class="en">Code</span></dt><dd><bdi dir="ltr">225-Onyx</bdi></dd>
+      </dl>
+      <button class="btn" type="button" data-open><span class="ar">شوف الصور بحجم كبير</span><span class="en">View the images large</span></button>
+    </div>
+    <div class="stagewrap">
+      <div class="stage" role="group" aria-label="GOLD-225-Onyx">
+        <div class="slide on" style="--bg:url(gallery/gold225-1-t.jpg)" data-full="gallery/gold225-1.jpg"><img src="gallery/gold225-1.jpg" alt="GOLD-225-Onyx, 1"></div>
+        <div class="slide" style="--bg:url(gallery/gold225-2-t.jpg)" data-full="gallery/gold225-2.jpg"><img data-src="gallery/gold225-2.jpg" alt="GOLD-225-Onyx, 2"></div>
+        <div class="slide" style="--bg:url(gallery/gold225-3-t.jpg)" data-full="gallery/gold225-3.jpg"><img data-src="gallery/gold225-3.jpg" alt="GOLD-225-Onyx, 3"></div>
+        <div class="slide" style="--bg:url(gallery/gold225-4-t.jpg)" data-full="gallery/gold225-4.jpg"><img data-src="gallery/gold225-4.jpg" alt="GOLD-225-Onyx, 4"></div>
+        <button class="zoom" type="button" aria-label="Open large"></button>
+        <button class="nav prev" type="button" aria-label="Previous">&#8249;</button>
+        <button class="nav next" type="button" aria-label="Next">&#8250;</button>
+        <span class="count" aria-live="off">1 / 4</span>
+      </div>
+      <div class="thumbs">
+        <button type="button" class="on" aria-label="1"><img src="gallery/gold225-1-t.jpg" alt=""></button>
+        <button type="button" aria-label="2"><img src="gallery/gold225-2-t.jpg" alt="" loading="lazy"></button>
+        <button type="button" aria-label="3"><img src="gallery/gold225-3-t.jpg" alt="" loading="lazy"></button>
+        <button type="button" aria-label="4"><img src="gallery/gold225-4-t.jpg" alt="" loading="lazy"></button>
+      </div>
+    </div>
+  </article>
+  <article class="proj" data-title="GOLD-228-Cararra">
+    <div class="pinfo">
+      <span class="tag"><span class="ar">تالت تصميم أرضيات للمصنع</span><span class="en">My third floor tile design for the factory</span></span>
+      <h3>GOLD-228-Cararra</h3>
+      <p><span class="ar">أرضية كرارا أبيض بلمعة عالية وعروق دهبية واضحة. صممت بوستر المنتج وصور التطبيق في الحمامات والصالات والواجهات.</span><span class="en">A high-gloss white carrara floor tile with bold golden veining. I designed the product poster and the bathroom, living-room and facade scenes.</span></p>
+      <dl class="specs">
+        <dt><span class="ar">المقاس</span><span class="en">Size</span></dt><dd><span class="ar"><bdi dir="ltr">60×60</bdi> سم</span><span class="en"><bdi dir="ltr">60×60</bdi> cm</span></dd>
+        <dt><span class="ar">الفنش</span><span class="en">Finish</span></dt><dd>High Glossy</dd>
+        <dt><span class="ar">السلسلة</span><span class="en">Series</span></dt><dd>GOLD</dd>
+        <dt><span class="ar">الكود</span><span class="en">Code</span></dt><dd><bdi dir="ltr">228-Cararra</bdi></dd>
+      </dl>
+      <button class="btn" type="button" data-open><span class="ar">شوف الصور بحجم كبير</span><span class="en">View the images large</span></button>
+    </div>
+    <div class="stagewrap">
+      <div class="stage" role="group" aria-label="GOLD-228-Cararra">
+        <div class="slide on" style="--bg:url(gallery/gold228-1-t.jpg)" data-full="gallery/gold228-1.jpg"><img src="gallery/gold228-1.jpg" alt="GOLD-228-Cararra, 1"></div>
+        <div class="slide" style="--bg:url(gallery/gold228-2-t.jpg)" data-full="gallery/gold228-2.jpg"><img data-src="gallery/gold228-2.jpg" alt="GOLD-228-Cararra, 2"></div>
+        <div class="slide" style="--bg:url(gallery/gold228-3-t.jpg)" data-full="gallery/gold228-3.jpg"><img data-src="gallery/gold228-3.jpg" alt="GOLD-228-Cararra, 3"></div>
+        <div class="slide" style="--bg:url(gallery/gold228-4-t.jpg)" data-full="gallery/gold228-4.jpg"><img data-src="gallery/gold228-4.jpg" alt="GOLD-228-Cararra, 4"></div>
+        <button class="zoom" type="button" aria-label="Open large"></button>
+        <button class="nav prev" type="button" aria-label="Previous">&#8249;</button>
+        <button class="nav next" type="button" aria-label="Next">&#8250;</button>
+        <span class="count" aria-live="off">1 / 4</span>
+      </div>
+      <div class="thumbs">
+        <button type="button" class="on" aria-label="1"><img src="gallery/gold228-1-t.jpg" alt=""></button>
+        <button type="button" aria-label="2"><img src="gallery/gold228-2-t.jpg" alt="" loading="lazy"></button>
+        <button type="button" aria-label="3"><img src="gallery/gold228-3-t.jpg" alt="" loading="lazy"></button>
+        <button type="button" aria-label="4"><img src="gallery/gold228-4-t.jpg" alt="" loading="lazy"></button>
+      </div>
+    </div>
+  </article>
+  <article class="proj rev" data-title="GOLD-230-Cararra">
+    <div class="pinfo">
+      <span class="tag"><span class="ar">رابع تصميم أرضيات للمصنع</span><span class="en">My fourth floor tile design for the factory</span></span>
+      <h3>GOLD-230-Cararra</h3>
+      <p><span class="ar">أرضية كرارا أبيض بلمعة عالية وعروق رمادية ناعمة. صممت بوستر المنتج وصور التطبيق في الصالات وغرف المعيشة.</span><span class="en">A high-gloss white carrara floor tile with soft grey veining. I designed the product poster and the dining and living-room scenes.</span></p>
+      <dl class="specs">
+        <dt><span class="ar">المقاس</span><span class="en">Size</span></dt><dd><span class="ar"><bdi dir="ltr">60×60</bdi> سم</span><span class="en"><bdi dir="ltr">60×60</bdi> cm</span></dd>
+        <dt><span class="ar">الفنش</span><span class="en">Finish</span></dt><dd>High Glossy</dd>
+        <dt><span class="ar">السلسلة</span><span class="en">Series</span></dt><dd>GOLD</dd>
+        <dt><span class="ar">الكود</span><span class="en">Code</span></dt><dd><bdi dir="ltr">230-Cararra</bdi></dd>
+      </dl>
+      <button class="btn" type="button" data-open><span class="ar">شوف الصور بحجم كبير</span><span class="en">View the images large</span></button>
+    </div>
+    <div class="stagewrap">
+      <div class="stage" role="group" aria-label="GOLD-230-Cararra">
+        <div class="slide on" style="--bg:url(gallery/gold230-1-t.jpg)" data-full="gallery/gold230-1.jpg"><img src="gallery/gold230-1.jpg" alt="GOLD-230-Cararra, 1"></div>
+        <div class="slide" style="--bg:url(gallery/gold230-2-t.jpg)" data-full="gallery/gold230-2.jpg"><img data-src="gallery/gold230-2.jpg" alt="GOLD-230-Cararra, 2"></div>
+        <div class="slide" style="--bg:url(gallery/gold230-3-t.jpg)" data-full="gallery/gold230-3.jpg"><img data-src="gallery/gold230-3.jpg" alt="GOLD-230-Cararra, 3"></div>
+        <div class="slide" style="--bg:url(gallery/gold230-4-t.jpg)" data-full="gallery/gold230-4.jpg"><img data-src="gallery/gold230-4.jpg" alt="GOLD-230-Cararra, 4"></div>
+        <button class="zoom" type="button" aria-label="Open large"></button>
+        <button class="nav prev" type="button" aria-label="Previous">&#8249;</button>
+        <button class="nav next" type="button" aria-label="Next">&#8250;</button>
+        <span class="count" aria-live="off">1 / 4</span>
+      </div>
+      <div class="thumbs">
+        <button type="button" class="on" aria-label="1"><img src="gallery/gold230-1-t.jpg" alt=""></button>
+        <button type="button" aria-label="2"><img src="gallery/gold230-2-t.jpg" alt="" loading="lazy"></button>
+        <button type="button" aria-label="3"><img src="gallery/gold230-3-t.jpg" alt="" loading="lazy"></button>
+        <button type="button" aria-label="4"><img src="gallery/gold230-4-t.jpg" alt="" loading="lazy"></button>
+      </div>
+    </div>
+  </article>
+  <article class="proj" data-title="GOLD-233-Grey">
+    <div class="pinfo">
+      <span class="tag"><span class="ar">خامس تصميم أرضيات للمصنع</span><span class="en">My fifth floor tile design for the factory</span></span>
+      <h3>GOLD-233-Grey</h3>
+      <p><span class="ar">أرضية أونيكس رمادي فاتح بلمعة عالية وعروق دهبية لامعة. صممت بوستر المنتج وصور التطبيق في الاستقبال وغرف الطعام.</span><span class="en">A high-gloss light grey onyx floor tile with shimmering golden veins. I designed the product poster and the reception and dining-room scenes.</span></p>
+      <dl class="specs">
+        <dt><span class="ar">المقاس</span><span class="en">Size</span></dt><dd><span class="ar"><bdi dir="ltr">60×60</bdi> سم</span><span class="en"><bdi dir="ltr">60×60</bdi> cm</span></dd>
+        <dt><span class="ar">الفنش</span><span class="en">Finish</span></dt><dd>High Glossy</dd>
+        <dt><span class="ar">السلسلة</span><span class="en">Series</span></dt><dd>GOLD</dd>
+        <dt><span class="ar">الكود</span><span class="en">Code</span></dt><dd><bdi dir="ltr">233-Grey</bdi></dd>
+      </dl>
+      <button class="btn" type="button" data-open><span class="ar">شوف الصور بحجم كبير</span><span class="en">View the images large</span></button>
+    </div>
+    <div class="stagewrap">
+      <div class="stage" role="group" aria-label="GOLD-233-Grey">
+        <div class="slide on" style="--bg:url(gallery/gold233-1-t.jpg)" data-full="gallery/gold233-1.jpg"><img src="gallery/gold233-1.jpg" alt="GOLD-233-Grey, 1"></div>
+        <div class="slide" style="--bg:url(gallery/gold233-2-t.jpg)" data-full="gallery/gold233-2.jpg"><img data-src="gallery/gold233-2.jpg" alt="GOLD-233-Grey, 2"></div>
+        <div class="slide" style="--bg:url(gallery/gold233-3-t.jpg)" data-full="gallery/gold233-3.jpg"><img data-src="gallery/gold233-3.jpg" alt="GOLD-233-Grey, 3"></div>
+        <div class="slide" style="--bg:url(gallery/gold233-4-t.jpg)" data-full="gallery/gold233-4.jpg"><img data-src="gallery/gold233-4.jpg" alt="GOLD-233-Grey, 4"></div>
+        <button class="zoom" type="button" aria-label="Open large"></button>
+        <button class="nav prev" type="button" aria-label="Previous">&#8249;</button>
+        <button class="nav next" type="button" aria-label="Next">&#8250;</button>
+        <span class="count" aria-live="off">1 / 4</span>
+      </div>
+      <div class="thumbs">
+        <button type="button" class="on" aria-label="1"><img src="gallery/gold233-1-t.jpg" alt=""></button>
+        <button type="button" aria-label="2"><img src="gallery/gold233-2-t.jpg" alt="" loading="lazy"></button>
+        <button type="button" aria-label="3"><img src="gallery/gold233-3-t.jpg" alt="" loading="lazy"></button>
+        <button type="button" aria-label="4"><img src="gallery/gold233-4-t.jpg" alt="" loading="lazy"></button>
+      </div>
+    </div>
+  </article>
+  <article class="proj rev" data-title="GOLD-234-Cararra">
+    <div class="pinfo">
+      <span class="tag"><span class="ar">سادس تصميم أرضيات للمصنع</span><span class="en">My sixth floor tile design for the factory</span></span>
+      <h3>GOLD-234-Cararra</h3>
+      <p><span class="ar">أرضية كرارا أبيض بلمعة عالية وعروق رمادية هادية. البوستر فيه مميزات المنتج: لمعة عالية، متانة تدوم سنين، وسهولة في التنظيف. وصممت صور التطبيق في الاستقبال والصالات.</span><span class="en">A high-gloss white carrara floor tile with calm grey veining. The poster highlights its strengths: high shine, lasting durability and easy cleaning. I also designed the lobby and living-room scenes.</span></p>
+      <dl class="specs">
+        <dt><span class="ar">المقاس</span><span class="en">Size</span></dt><dd><span class="ar"><bdi dir="ltr">60×60</bdi> سم</span><span class="en"><bdi dir="ltr">60×60</bdi> cm</span></dd>
+        <dt><span class="ar">الفنش</span><span class="en">Finish</span></dt><dd>High Glossy</dd>
+        <dt><span class="ar">السلسلة</span><span class="en">Series</span></dt><dd>GOLD</dd>
+        <dt><span class="ar">الكود</span><span class="en">Code</span></dt><dd><bdi dir="ltr">234-Cararra</bdi></dd>
+      </dl>
+      <button class="btn" type="button" data-open><span class="ar">شوف الصور بحجم كبير</span><span class="en">View the images large</span></button>
+    </div>
+    <div class="stagewrap">
+      <div class="stage" role="group" aria-label="GOLD-234-Cararra">
+        <div class="slide on" style="--bg:url(gallery/gold234-1-t.jpg)" data-full="gallery/gold234-1.jpg"><img src="gallery/gold234-1.jpg" alt="GOLD-234-Cararra, 1"></div>
+        <div class="slide" style="--bg:url(gallery/gold234-2-t.jpg)" data-full="gallery/gold234-2.jpg"><img data-src="gallery/gold234-2.jpg" alt="GOLD-234-Cararra, 2"></div>
+        <div class="slide" style="--bg:url(gallery/gold234-3-t.jpg)" data-full="gallery/gold234-3.jpg"><img data-src="gallery/gold234-3.jpg" alt="GOLD-234-Cararra, 3"></div>
+        <div class="slide" style="--bg:url(gallery/gold234-4-t.jpg)" data-full="gallery/gold234-4.jpg"><img data-src="gallery/gold234-4.jpg" alt="GOLD-234-Cararra, 4"></div>
+        <button class="zoom" type="button" aria-label="Open large"></button>
+        <button class="nav prev" type="button" aria-label="Previous">&#8249;</button>
+        <button class="nav next" type="button" aria-label="Next">&#8250;</button>
+        <span class="count" aria-live="off">1 / 4</span>
+      </div>
+      <div class="thumbs">
+        <button type="button" class="on" aria-label="1"><img src="gallery/gold234-1-t.jpg" alt=""></button>
+        <button type="button" aria-label="2"><img src="gallery/gold234-2-t.jpg" alt="" loading="lazy"></button>
+        <button type="button" aria-label="3"><img src="gallery/gold234-3-t.jpg" alt="" loading="lazy"></button>
+        <button type="button" aria-label="4"><img src="gallery/gold234-4-t.jpg" alt="" loading="lazy"></button>
+      </div>
+    </div>
+  </article>
+  <article class="proj" data-title="GOLD-235-Cararra">
+    <div class="pinfo">
+      <span class="tag"><span class="ar">سابع تصميم أرضيات للمصنع</span><span class="en">My seventh floor tile design for the factory</span></span>
+      <h3>GOLD-235-Cararra</h3>
+      <p><span class="ar">أرضية كرارا أبيض فاتح بلمعة عالية وعروق رمادية ناعمة. صممت لقطة قريبة للبلاطات وانعكاس الضوء عليها، ومعاها مشاهد للصالة والممر والبلاطة على قاعدة العرض.</span><span class="en">A bright high-gloss white carrara floor tile with soft grey veining. I designed a close-up of the tiles and their reflections, plus living-room, corridor and display-stand scenes.</span></p>
+      <dl class="specs">
+        <dt><span class="ar">المقاس</span><span class="en">Size</span></dt><dd><span class="ar"><bdi dir="ltr">60×60</bdi> سم</span><span class="en"><bdi dir="ltr">60×60</bdi> cm</span></dd>
+        <dt><span class="ar">الفنش</span><span class="en">Finish</span></dt><dd>High Glossy</dd>
+        <dt><span class="ar">السلسلة</span><span class="en">Series</span></dt><dd>GOLD</dd>
+        <dt><span class="ar">الكود</span><span class="en">Code</span></dt><dd><bdi dir="ltr">235-Cararra</bdi></dd>
+      </dl>
+      <button class="btn" type="button" data-open><span class="ar">شوف الصور بحجم كبير</span><span class="en">View the images large</span></button>
+    </div>
+    <div class="stagewrap">
+      <div class="stage" role="group" aria-label="GOLD-235-Cararra">
+        <div class="slide on" style="--bg:url(gallery/gold235-1-t.jpg)" data-full="gallery/gold235-1.jpg"><img src="gallery/gold235-1.jpg" alt="GOLD-235-Cararra, 1"></div>
+        <div class="slide" style="--bg:url(gallery/gold235-2-t.jpg)" data-full="gallery/gold235-2.jpg"><img data-src="gallery/gold235-2.jpg" alt="GOLD-235-Cararra, 2"></div>
+        <div class="slide" style="--bg:url(gallery/gold235-3-t.jpg)" data-full="gallery/gold235-3.jpg"><img data-src="gallery/gold235-3.jpg" alt="GOLD-235-Cararra, 3"></div>
+        <div class="slide" style="--bg:url(gallery/gold235-4-t.jpg)" data-full="gallery/gold235-4.jpg"><img data-src="gallery/gold235-4.jpg" alt="GOLD-235-Cararra, 4"></div>
+        <button class="zoom" type="button" aria-label="Open large"></button>
+        <button class="nav prev" type="button" aria-label="Previous">&#8249;</button>
+        <button class="nav next" type="button" aria-label="Next">&#8250;</button>
+        <span class="count" aria-live="off">1 / 4</span>
+      </div>
+      <div class="thumbs">
+        <button type="button" class="on" aria-label="1"><img src="gallery/gold235-1-t.jpg" alt=""></button>
+        <button type="button" aria-label="2"><img src="gallery/gold235-2-t.jpg" alt="" loading="lazy"></button>
+        <button type="button" aria-label="3"><img src="gallery/gold235-3-t.jpg" alt="" loading="lazy"></button>
+        <button type="button" aria-label="4"><img src="gallery/gold235-4-t.jpg" alt="" loading="lazy"></button>
+      </div>
+    </div>
+  </article>
+  <article class="proj rev" data-title="GOLD-239-Cararra-Gold">
+    <div class="pinfo">
+      <span class="tag"><span class="ar">ثامن تصميم أرضيات للمصنع</span><span class="en">My eighth floor tile design for the factory</span></span>
+      <h3>GOLD-239-Cararra-Gold</h3>
+      <p><span class="ar">كرارا أبيض بعروق دهبية دافية وبقع رمادية، بلمعة عالية. عرضتها في لوبي فخم وصالة بتجهيز عصري وعلى طاولة عرض.</span><span class="en">White carrara with warm golden veins and grey accents, in high gloss. Shown in a grand lobby, a modern living room and on a display table.</span></p>
+      <dl class="specs">
+        <dt><span class="ar">المقاس</span><span class="en">Size</span></dt><dd><span class="ar"><bdi dir="ltr">60×60</bdi> سم</span><span class="en"><bdi dir="ltr">60×60</bdi> cm</span></dd>
+        <dt><span class="ar">الفنش</span><span class="en">Finish</span></dt><dd>High Glossy</dd>
+        <dt><span class="ar">السلسلة</span><span class="en">Series</span></dt><dd>GOLD</dd>
+        <dt><span class="ar">الكود</span><span class="en">Code</span></dt><dd><bdi dir="ltr">239-Cararra-Gold</bdi></dd>
+      </dl>
+      <button class="btn" type="button" data-open><span class="ar">شوف الصور بحجم كبير</span><span class="en">View the images large</span></button>
+    </div>
+    <div class="stagewrap">
+      <div class="stage" role="group" aria-label="GOLD-239-Cararra-Gold">
+        <div class="slide on" style="--bg:url(gallery/gold239-1-t.jpg)" data-full="gallery/gold239-1.jpg"><img src="gallery/gold239-1.jpg" alt="GOLD-239-Cararra-Gold, 1"></div>
+        <div class="slide" style="--bg:url(gallery/gold239-2-t.jpg)" data-full="gallery/gold239-2.jpg"><img data-src="gallery/gold239-2.jpg" alt="GOLD-239-Cararra-Gold, 2"></div>
+        <div class="slide" style="--bg:url(gallery/gold239-3-t.jpg)" data-full="gallery/gold239-3.jpg"><img data-src="gallery/gold239-3.jpg" alt="GOLD-239-Cararra-Gold, 3"></div>
+        <div class="slide" style="--bg:url(gallery/gold239-4-t.jpg)" data-full="gallery/gold239-4.jpg"><img data-src="gallery/gold239-4.jpg" alt="GOLD-239-Cararra-Gold, 4"></div>
+        <button class="zoom" type="button" aria-label="Open large"></button>
+        <button class="nav prev" type="button" aria-label="Previous">&#8249;</button>
+        <button class="nav next" type="button" aria-label="Next">&#8250;</button>
+        <span class="count" aria-live="off">1 / 4</span>
+      </div>
+      <div class="thumbs">
+        <button type="button" class="on" aria-label="1"><img src="gallery/gold239-1-t.jpg" alt=""></button>
+        <button type="button" aria-label="2"><img src="gallery/gold239-2-t.jpg" alt="" loading="lazy"></button>
+        <button type="button" aria-label="3"><img src="gallery/gold239-3-t.jpg" alt="" loading="lazy"></button>
+        <button type="button" aria-label="4"><img src="gallery/gold239-4-t.jpg" alt="" loading="lazy"></button>
+      </div>
+    </div>
+  </article>
+  <article class="proj" data-title="GOLD-240-Black">
+    <div class="pinfo">
+      <span class="tag"><span class="ar">تاسع تصميم أرضيات للمصنع</span><span class="en">My ninth floor tile design for the factory</span></span>
+      <h3>GOLD-240-Black</h3>
+      <p><span class="ar">أرضية سودا بلمعة عالية وعروق بيضا حادة، شكل درامي وفخم. صممت لها مشاهد لبنت هاوس ولوبي ولقطة هادية بالليل.</span><span class="en">A high-gloss black floor tile with sharp white veining for a dramatic, luxurious look. I designed penthouse, lobby and evening scenes for it.</span></p>
+      <dl class="specs">
+        <dt><span class="ar">المقاس</span><span class="en">Size</span></dt><dd><span class="ar"><bdi dir="ltr">60×60</bdi> سم</span><span class="en"><bdi dir="ltr">60×60</bdi> cm</span></dd>
+        <dt><span class="ar">الفنش</span><span class="en">Finish</span></dt><dd>High Glossy</dd>
+        <dt><span class="ar">السلسلة</span><span class="en">Series</span></dt><dd>GOLD</dd>
+        <dt><span class="ar">الكود</span><span class="en">Code</span></dt><dd><bdi dir="ltr">240-Black</bdi></dd>
+      </dl>
+      <button class="btn" type="button" data-open><span class="ar">شوف الصور بحجم كبير</span><span class="en">View the images large</span></button>
+    </div>
+    <div class="stagewrap">
+      <div class="stage" role="group" aria-label="GOLD-240-Black">
+        <div class="slide on" style="--bg:url(gallery/gold240b-1-t.jpg)" data-full="gallery/gold240b-1.jpg"><img src="gallery/gold240b-1.jpg" alt="GOLD-240-Black, 1"></div>
+        <div class="slide" style="--bg:url(gallery/gold240b-2-t.jpg)" data-full="gallery/gold240b-2.jpg"><img data-src="gallery/gold240b-2.jpg" alt="GOLD-240-Black, 2"></div>
+        <div class="slide" style="--bg:url(gallery/gold240b-3-t.jpg)" data-full="gallery/gold240b-3.jpg"><img data-src="gallery/gold240b-3.jpg" alt="GOLD-240-Black, 3"></div>
+        <div class="slide" style="--bg:url(gallery/gold240b-4-t.jpg)" data-full="gallery/gold240b-4.jpg"><img data-src="gallery/gold240b-4.jpg" alt="GOLD-240-Black, 4"></div>
+        <button class="zoom" type="button" aria-label="Open large"></button>
+        <button class="nav prev" type="button" aria-label="Previous">&#8249;</button>
+        <button class="nav next" type="button" aria-label="Next">&#8250;</button>
+        <span class="count" aria-live="off">1 / 4</span>
+      </div>
+      <div class="thumbs">
+        <button type="button" class="on" aria-label="1"><img src="gallery/gold240b-1-t.jpg" alt=""></button>
+        <button type="button" aria-label="2"><img src="gallery/gold240b-2-t.jpg" alt="" loading="lazy"></button>
+        <button type="button" aria-label="3"><img src="gallery/gold240b-3-t.jpg" alt="" loading="lazy"></button>
+        <button type="button" aria-label="4"><img src="gallery/gold240b-4-t.jpg" alt="" loading="lazy"></button>
+      </div>
+    </div>
+  </article>
+  <article class="proj rev" data-title="GOLD-240-Cararra">
+    <div class="pinfo">
+      <span class="tag"><span class="ar">عاشر تصميم أرضيات للمصنع</span><span class="en">My tenth floor tile design for the factory</span></span>
+      <h3>GOLD-240-Cararra</h3>
+      <p><span class="ar">أرضية بيضا بلمعة عالية وعروق سودا جريئة، بتدي الصالة طابع عصري. صممت لها مشاهد لصالة واسعة وبلاطة وسط طبيعة ومشهد عائلي.</span><span class="en">A high-gloss white tile with bold black veining that gives a room a contemporary edge. Scenes include a spacious living room, a tile among nature and a family setting.</span></p>
+      <dl class="specs">
+        <dt><span class="ar">المقاس</span><span class="en">Size</span></dt><dd><span class="ar"><bdi dir="ltr">60×60</bdi> سم</span><span class="en"><bdi dir="ltr">60×60</bdi> cm</span></dd>
+        <dt><span class="ar">الفنش</span><span class="en">Finish</span></dt><dd>High Glossy</dd>
+        <dt><span class="ar">السلسلة</span><span class="en">Series</span></dt><dd>GOLD</dd>
+        <dt><span class="ar">الكود</span><span class="en">Code</span></dt><dd><bdi dir="ltr">240-Cararra</bdi></dd>
+      </dl>
+      <button class="btn" type="button" data-open><span class="ar">شوف الصور بحجم كبير</span><span class="en">View the images large</span></button>
+    </div>
+    <div class="stagewrap">
+      <div class="stage" role="group" aria-label="GOLD-240-Cararra">
+        <div class="slide on" style="--bg:url(gallery/gold240c-1-t.jpg)" data-full="gallery/gold240c-1.jpg"><img src="gallery/gold240c-1.jpg" alt="GOLD-240-Cararra, 1"></div>
+        <div class="slide" style="--bg:url(gallery/gold240c-2-t.jpg)" data-full="gallery/gold240c-2.jpg"><img data-src="gallery/gold240c-2.jpg" alt="GOLD-240-Cararra, 2"></div>
+        <div class="slide" style="--bg:url(gallery/gold240c-3-t.jpg)" data-full="gallery/gold240c-3.jpg"><img data-src="gallery/gold240c-3.jpg" alt="GOLD-240-Cararra, 3"></div>
+        <div class="slide" style="--bg:url(gallery/gold240c-4-t.jpg)" data-full="gallery/gold240c-4.jpg"><img data-src="gallery/gold240c-4.jpg" alt="GOLD-240-Cararra, 4"></div>
+        <button class="zoom" type="button" aria-label="Open large"></button>
+        <button class="nav prev" type="button" aria-label="Previous">&#8249;</button>
+        <button class="nav next" type="button" aria-label="Next">&#8250;</button>
+        <span class="count" aria-live="off">1 / 4</span>
+      </div>
+      <div class="thumbs">
+        <button type="button" class="on" aria-label="1"><img src="gallery/gold240c-1-t.jpg" alt=""></button>
+        <button type="button" aria-label="2"><img src="gallery/gold240c-2-t.jpg" alt="" loading="lazy"></button>
+        <button type="button" aria-label="3"><img src="gallery/gold240c-3-t.jpg" alt="" loading="lazy"></button>
+        <button type="button" aria-label="4"><img src="gallery/gold240c-4-t.jpg" alt="" loading="lazy"></button>
+      </div>
+    </div>
+  </article>
+  <article class="proj" data-title="GOLD-241-Grey">
+    <div class="pinfo">
+      <span class="tag"><span class="ar">حداشر تصميم أرضيات للمصنع</span><span class="en">My eleventh floor tile design for the factory</span></span>
+      <h3>GOLD-241-Grey</h3>
+      <p><span class="ar">أرضية رمادي فاتح بنقشة أونيكس وعروق دهبية رفيعة، بلمعة عالية. صممت لها مشاهد لصالة فخمة من أكتر من زاوية، ولوحة عرض بمواصفاتها: المقاس والفنش والحواف الليزر.</span><span class="en">A light grey onyx-style floor tile with fine golden veining in high gloss. I designed luxurious living-room scenes from several angles, plus a showcase board with its specs: size, finish and laser-cut rectified edges.</span></p>
+      <dl class="specs">
+        <dt><span class="ar">المقاس</span><span class="en">Size</span></dt><dd><span class="ar"><bdi dir="ltr">60×60</bdi> سم</span><span class="en"><bdi dir="ltr">60×60</bdi> cm</span></dd>
+        <dt><span class="ar">الفنش</span><span class="en">Finish</span></dt><dd>High Glossy</dd>
+        <dt><span class="ar">السلسلة</span><span class="en">Series</span></dt><dd>GOLD</dd>
+        <dt><span class="ar">الكود</span><span class="en">Code</span></dt><dd><bdi dir="ltr">241-Grey</bdi></dd>
+      </dl>
+      <button class="btn" type="button" data-open><span class="ar">شوف الصور بحجم كبير</span><span class="en">View the images large</span></button>
+    </div>
+    <div class="stagewrap">
+      <div class="stage" role="group" aria-label="GOLD-241-Grey">
+        <div class="slide on" style="--bg:url(gallery/gold241-1-t.jpg)" data-full="gallery/gold241-1.jpg"><img src="gallery/gold241-1.jpg" alt="GOLD-241-Grey, 1"></div>
+        <div class="slide" style="--bg:url(gallery/gold241-2-t.jpg)" data-full="gallery/gold241-2.jpg"><img data-src="gallery/gold241-2.jpg" alt="GOLD-241-Grey, 2"></div>
+        <div class="slide" style="--bg:url(gallery/gold241-3-t.jpg)" data-full="gallery/gold241-3.jpg"><img data-src="gallery/gold241-3.jpg" alt="GOLD-241-Grey, 3"></div>
+        <div class="slide" style="--bg:url(gallery/gold241-4-t.jpg)" data-full="gallery/gold241-4.jpg"><img data-src="gallery/gold241-4.jpg" alt="GOLD-241-Grey, 4"></div>
+        <button class="zoom" type="button" aria-label="Open large"></button>
+        <button class="nav prev" type="button" aria-label="Previous">&#8249;</button>
+        <button class="nav next" type="button" aria-label="Next">&#8250;</button>
+        <span class="count" aria-live="off">1 / 4</span>
+      </div>
+      <div class="thumbs">
+        <button type="button" class="on" aria-label="1"><img src="gallery/gold241-1-t.jpg" alt=""></button>
+        <button type="button" aria-label="2"><img src="gallery/gold241-2-t.jpg" alt="" loading="lazy"></button>
+        <button type="button" aria-label="3"><img src="gallery/gold241-3-t.jpg" alt="" loading="lazy"></button>
+        <button type="button" aria-label="4"><img src="gallery/gold241-4-t.jpg" alt="" loading="lazy"></button>
+      </div>
+    </div>
+  </article>
+  <article class="proj rev" data-title="GOLD-242-Cararra">
+    <div class="pinfo">
+      <span class="tag"><span class="ar">اتناشر تصميم أرضيات للمصنع</span><span class="en">My twelfth floor tile design for the factory</span></span>
+      <h3>GOLD-242-Cararra</h3>
+      <p><span class="ar">كرارا أبيض بعروق دهبية لامعة وعريضة، بلمعة عالية. صممت لها لقطة عرض على قاعدة رخام وسط الطبيعة، ومشاهد لصالات بديكور دافي.</span><span class="en">White carrara with bold, shimmering golden veins in high gloss. I designed a showcase shot on a marble plinth amid nature, and warm-toned living-room scenes.</span></p>
+      <dl class="specs">
+        <dt><span class="ar">المقاس</span><span class="en">Size</span></dt><dd><span class="ar"><bdi dir="ltr">60×60</bdi> سم</span><span class="en"><bdi dir="ltr">60×60</bdi> cm</span></dd>
+        <dt><span class="ar">الفنش</span><span class="en">Finish</span></dt><dd>High Glossy</dd>
+        <dt><span class="ar">السلسلة</span><span class="en">Series</span></dt><dd>GOLD</dd>
+        <dt><span class="ar">الكود</span><span class="en">Code</span></dt><dd><bdi dir="ltr">242-Cararra</bdi></dd>
+      </dl>
+      <button class="btn" type="button" data-open><span class="ar">شوف الصور بحجم كبير</span><span class="en">View the images large</span></button>
+    </div>
+    <div class="stagewrap">
+      <div class="stage" role="group" aria-label="GOLD-242-Cararra">
+        <div class="slide on" style="--bg:url(gallery/gold242-1-t.jpg)" data-full="gallery/gold242-1.jpg"><img src="gallery/gold242-1.jpg" alt="GOLD-242-Cararra, 1"></div>
+        <div class="slide" style="--bg:url(gallery/gold242-2-t.jpg)" data-full="gallery/gold242-2.jpg"><img data-src="gallery/gold242-2.jpg" alt="GOLD-242-Cararra, 2"></div>
+        <div class="slide" style="--bg:url(gallery/gold242-3-t.jpg)" data-full="gallery/gold242-3.jpg"><img data-src="gallery/gold242-3.jpg" alt="GOLD-242-Cararra, 3"></div>
+        <div class="slide" style="--bg:url(gallery/gold242-4-t.jpg)" data-full="gallery/gold242-4.jpg"><img data-src="gallery/gold242-4.jpg" alt="GOLD-242-Cararra, 4"></div>
+        <button class="zoom" type="button" aria-label="Open large"></button>
+        <button class="nav prev" type="button" aria-label="Previous">&#8249;</button>
+        <button class="nav next" type="button" aria-label="Next">&#8250;</button>
+        <span class="count" aria-live="off">1 / 4</span>
+      </div>
+      <div class="thumbs">
+        <button type="button" class="on" aria-label="1"><img src="gallery/gold242-1-t.jpg" alt=""></button>
+        <button type="button" aria-label="2"><img src="gallery/gold242-2-t.jpg" alt="" loading="lazy"></button>
+        <button type="button" aria-label="3"><img src="gallery/gold242-3-t.jpg" alt="" loading="lazy"></button>
+        <button type="button" aria-label="4"><img src="gallery/gold242-4-t.jpg" alt="" loading="lazy"></button>
+      </div>
+    </div>
+  </article>
+  <article class="proj" data-title="GOLD-247-Gondola">
+    <div class="pinfo">
+      <span class="tag"><span class="ar">تلاتاشر تصميم أرضيات للمصنع</span><span class="en">My thirteenth floor tile design for the factory</span></span>
+      <h3>GOLD-247-Gondola</h3>
+      <p><span class="ar">أرضية جراني بني غامق بحبيبات متناثرة، بلمعة عالية وشكل عملي وفخم. عرضتها في أوضة نوم وصالة ومطبخ وركن جلوس.</span><span class="en">A dark brown speckled granite-look floor tile in high gloss, practical yet upscale. Shown in a bedroom, a lounge, a kitchen-dining area and a reading corner.</span></p>
+      <dl class="specs">
+        <dt><span class="ar">المقاس</span><span class="en">Size</span></dt><dd><span class="ar"><bdi dir="ltr">60×60</bdi> سم</span><span class="en"><bdi dir="ltr">60×60</bdi> cm</span></dd>
+        <dt><span class="ar">الفنش</span><span class="en">Finish</span></dt><dd>High Glossy</dd>
+        <dt><span class="ar">السلسلة</span><span class="en">Series</span></dt><dd>GOLD</dd>
+        <dt><span class="ar">الكود</span><span class="en">Code</span></dt><dd><bdi dir="ltr">247-Gondola</bdi></dd>
+      </dl>
+      <button class="btn" type="button" data-open><span class="ar">شوف الصور بحجم كبير</span><span class="en">View the images large</span></button>
+    </div>
+    <div class="stagewrap">
+      <div class="stage" role="group" aria-label="GOLD-247-Gondola">
+        <div class="slide on" style="--bg:url(gallery/gold247-1-t.jpg)" data-full="gallery/gold247-1.jpg"><img src="gallery/gold247-1.jpg" alt="GOLD-247-Gondola, 1"></div>
+        <div class="slide" style="--bg:url(gallery/gold247-2-t.jpg)" data-full="gallery/gold247-2.jpg"><img data-src="gallery/gold247-2.jpg" alt="GOLD-247-Gondola, 2"></div>
+        <div class="slide" style="--bg:url(gallery/gold247-3-t.jpg)" data-full="gallery/gold247-3.jpg"><img data-src="gallery/gold247-3.jpg" alt="GOLD-247-Gondola, 3"></div>
+        <div class="slide" style="--bg:url(gallery/gold247-4-t.jpg)" data-full="gallery/gold247-4.jpg"><img data-src="gallery/gold247-4.jpg" alt="GOLD-247-Gondola, 4"></div>
+        <div class="slide" style="--bg:url(gallery/gold247-5-t.jpg)" data-full="gallery/gold247-5.jpg"><img data-src="gallery/gold247-5.jpg" alt="GOLD-247-Gondola, 5"></div>
+        <button class="zoom" type="button" aria-label="Open large"></button>
+        <button class="nav prev" type="button" aria-label="Previous">&#8249;</button>
+        <button class="nav next" type="button" aria-label="Next">&#8250;</button>
+        <span class="count" aria-live="off">1 / 5</span>
+      </div>
+      <div class="thumbs">
+        <button type="button" class="on" aria-label="1"><img src="gallery/gold247-1-t.jpg" alt=""></button>
+        <button type="button" aria-label="2"><img src="gallery/gold247-2-t.jpg" alt="" loading="lazy"></button>
+        <button type="button" aria-label="3"><img src="gallery/gold247-3-t.jpg" alt="" loading="lazy"></button>
+        <button type="button" aria-label="4"><img src="gallery/gold247-4-t.jpg" alt="" loading="lazy"></button>
+        <button type="button" aria-label="5"><img src="gallery/gold247-5-t.jpg" alt="" loading="lazy"></button>
+      </div>
+    </div>
+  </article>
+  <article class="proj rev" data-title="GOLD-248-Cararra">
+    <div class="pinfo">
+      <span class="tag"><span class="ar">أربعتاشر تصميم أرضيات للمصنع</span><span class="en">My fourteenth floor tile design for the factory</span></span>
+      <h3>GOLD-248-Cararra</h3>
+      <p><span class="ar">كرارا أبيض دافي بعروق بيج هادية، بلمعة عالية. صممت لها لقطة عرض وقت الغروب ومشاهد لصالة سفرة وصالة معيشة ولوبي فندق.</span><span class="en">A warm white carrara with soft beige veining in high gloss. I designed a sunset showcase shot and dining, living-room and hotel-lobby scenes.</span></p>
+      <dl class="specs">
+        <dt><span class="ar">المقاس</span><span class="en">Size</span></dt><dd><span class="ar"><bdi dir="ltr">60×60</bdi> سم</span><span class="en"><bdi dir="ltr">60×60</bdi> cm</span></dd>
+        <dt><span class="ar">الفنش</span><span class="en">Finish</span></dt><dd>High Glossy</dd>
+        <dt><span class="ar">السلسلة</span><span class="en">Series</span></dt><dd>GOLD</dd>
+        <dt><span class="ar">الكود</span><span class="en">Code</span></dt><dd><bdi dir="ltr">248-Cararra</bdi></dd>
+      </dl>
+      <button class="btn" type="button" data-open><span class="ar">شوف الصور بحجم كبير</span><span class="en">View the images large</span></button>
+    </div>
+    <div class="stagewrap">
+      <div class="stage" role="group" aria-label="GOLD-248-Cararra">
+        <div class="slide on" style="--bg:url(gallery/gold248-1-t.jpg)" data-full="gallery/gold248-1.jpg"><img src="gallery/gold248-1.jpg" alt="GOLD-248-Cararra, 1"></div>
+        <div class="slide" style="--bg:url(gallery/gold248-2-t.jpg)" data-full="gallery/gold248-2.jpg"><img data-src="gallery/gold248-2.jpg" alt="GOLD-248-Cararra, 2"></div>
+        <div class="slide" style="--bg:url(gallery/gold248-3-t.jpg)" data-full="gallery/gold248-3.jpg"><img data-src="gallery/gold248-3.jpg" alt="GOLD-248-Cararra, 3"></div>
+        <div class="slide" style="--bg:url(gallery/gold248-4-t.jpg)" data-full="gallery/gold248-4.jpg"><img data-src="gallery/gold248-4.jpg" alt="GOLD-248-Cararra, 4"></div>
+        <button class="zoom" type="button" aria-label="Open large"></button>
+        <button class="nav prev" type="button" aria-label="Previous">&#8249;</button>
+        <button class="nav next" type="button" aria-label="Next">&#8250;</button>
+        <span class="count" aria-live="off">1 / 4</span>
+      </div>
+      <div class="thumbs">
+        <button type="button" class="on" aria-label="1"><img src="gallery/gold248-1-t.jpg" alt=""></button>
+        <button type="button" aria-label="2"><img src="gallery/gold248-2-t.jpg" alt="" loading="lazy"></button>
+        <button type="button" aria-label="3"><img src="gallery/gold248-3-t.jpg" alt="" loading="lazy"></button>
+        <button type="button" aria-label="4"><img src="gallery/gold248-4-t.jpg" alt="" loading="lazy"></button>
+      </div>
+    </div>
+  </article>
+  <article class="proj" data-title="GOLD-249-Light-Grey">
+    <div class="pinfo">
+      <span class="tag"><span class="ar">خمستاشر تصميم أرضيات للمصنع</span><span class="en">My fifteenth floor tile design for the factory</span></span>
+      <h3>GOLD-249-Light-Grey</h3>
+      <p><span class="ar">أرضية رمادي فاتح بعروق ناعمة وبلمعة عالية، لون هادي وعملي بيتماشى مع أغلب الديكورات. عرضتها في صالة مودرن وممر بحديقة داخلية ولوبي استقبال.</span><span class="en">A light grey floor tile with soft veining in high gloss, a calm, versatile tone that suits most interiors. Shown in a modern living room, a corridor with an indoor garden and a reception lobby.</span></p>
+      <dl class="specs">
+        <dt><span class="ar">المقاس</span><span class="en">Size</span></dt><dd><span class="ar"><bdi dir="ltr">60×60</bdi> سم</span><span class="en"><bdi dir="ltr">60×60</bdi> cm</span></dd>
+        <dt><span class="ar">الفنش</span><span class="en">Finish</span></dt><dd>High Glossy</dd>
+        <dt><span class="ar">السلسلة</span><span class="en">Series</span></dt><dd>GOLD</dd>
+        <dt><span class="ar">الكود</span><span class="en">Code</span></dt><dd><bdi dir="ltr">249-Light Grey</bdi></dd>
+      </dl>
+      <button class="btn" type="button" data-open><span class="ar">شوف الصور بحجم كبير</span><span class="en">View the images large</span></button>
+    </div>
+    <div class="stagewrap">
+      <div class="stage" role="group" aria-label="GOLD-249-Light-Grey">
+        <div class="slide on" style="--bg:url(gallery/gold249-1-t.jpg)" data-full="gallery/gold249-1.jpg"><img src="gallery/gold249-1.jpg" alt="GOLD-249-Light-Grey, 1"></div>
+        <div class="slide" style="--bg:url(gallery/gold249-2-t.jpg)" data-full="gallery/gold249-2.jpg"><img data-src="gallery/gold249-2.jpg" alt="GOLD-249-Light-Grey, 2"></div>
+        <div class="slide" style="--bg:url(gallery/gold249-3-t.jpg)" data-full="gallery/gold249-3.jpg"><img data-src="gallery/gold249-3.jpg" alt="GOLD-249-Light-Grey, 3"></div>
+        <div class="slide" style="--bg:url(gallery/gold249-4-t.jpg)" data-full="gallery/gold249-4.jpg"><img data-src="gallery/gold249-4.jpg" alt="GOLD-249-Light-Grey, 4"></div>
+        <button class="zoom" type="button" aria-label="Open large"></button>
+        <button class="nav prev" type="button" aria-label="Previous">&#8249;</button>
+        <button class="nav next" type="button" aria-label="Next">&#8250;</button>
+        <span class="count" aria-live="off">1 / 4</span>
+      </div>
+      <div class="thumbs">
+        <button type="button" class="on" aria-label="1"><img src="gallery/gold249-1-t.jpg" alt=""></button>
+        <button type="button" aria-label="2"><img src="gallery/gold249-2-t.jpg" alt="" loading="lazy"></button>
+        <button type="button" aria-label="3"><img src="gallery/gold249-3-t.jpg" alt="" loading="lazy"></button>
+        <button type="button" aria-label="4"><img src="gallery/gold249-4-t.jpg" alt="" loading="lazy"></button>
+      </div>
+    </div>
+  </article>
+  <article class="proj rev" data-title="GOLD-250-Onyx">
+    <div class="pinfo">
+      <span class="tag"><span class="ar">ستاشر تصميم أرضيات للمصنع</span><span class="en">My sixteenth floor tile design for the factory</span></span>
+      <h3>GOLD-250-Onyx</h3>
+      <p><span class="ar">أونيكس أبيض كريمي بدرجات بيج ورمادي ناعمة، بلمعة عالية. صممت لها لقطة عرض وسط ضوء طبيعي ومشاهد لصالة ولوبي وسفرة.</span><span class="en">A creamy white onyx with soft beige and grey tones in high gloss. I designed a natural-light showcase shot plus living-room, lobby and dining scenes.</span></p>
+      <dl class="specs">
+        <dt><span class="ar">المقاس</span><span class="en">Size</span></dt><dd><span class="ar"><bdi dir="ltr">60×60</bdi> سم</span><span class="en"><bdi dir="ltr">60×60</bdi> cm</span></dd>
+        <dt><span class="ar">الفنش</span><span class="en">Finish</span></dt><dd>High Glossy</dd>
+        <dt><span class="ar">السلسلة</span><span class="en">Series</span></dt><dd>GOLD</dd>
+        <dt><span class="ar">الكود</span><span class="en">Code</span></dt><dd><bdi dir="ltr">250-Onyx</bdi></dd>
+      </dl>
+      <button class="btn" type="button" data-open><span class="ar">شوف الصور بحجم كبير</span><span class="en">View the images large</span></button>
+    </div>
+    <div class="stagewrap">
+      <div class="stage" role="group" aria-label="GOLD-250-Onyx">
+        <div class="slide on" style="--bg:url(gallery/gold250-1-t.jpg)" data-full="gallery/gold250-1.jpg"><img src="gallery/gold250-1.jpg" alt="GOLD-250-Onyx, 1"></div>
+        <div class="slide" style="--bg:url(gallery/gold250-2-t.jpg)" data-full="gallery/gold250-2.jpg"><img data-src="gallery/gold250-2.jpg" alt="GOLD-250-Onyx, 2"></div>
+        <div class="slide" style="--bg:url(gallery/gold250-3-t.jpg)" data-full="gallery/gold250-3.jpg"><img data-src="gallery/gold250-3.jpg" alt="GOLD-250-Onyx, 3"></div>
+        <div class="slide" style="--bg:url(gallery/gold250-4-t.jpg)" data-full="gallery/gold250-4.jpg"><img data-src="gallery/gold250-4.jpg" alt="GOLD-250-Onyx, 4"></div>
+        <button class="zoom" type="button" aria-label="Open large"></button>
+        <button class="nav prev" type="button" aria-label="Previous">&#8249;</button>
+        <button class="nav next" type="button" aria-label="Next">&#8250;</button>
+        <span class="count" aria-live="off">1 / 4</span>
+      </div>
+      <div class="thumbs">
+        <button type="button" class="on" aria-label="1"><img src="gallery/gold250-1-t.jpg" alt=""></button>
+        <button type="button" aria-label="2"><img src="gallery/gold250-2-t.jpg" alt="" loading="lazy"></button>
+        <button type="button" aria-label="3"><img src="gallery/gold250-3-t.jpg" alt="" loading="lazy"></button>
+        <button type="button" aria-label="4"><img src="gallery/gold250-4-t.jpg" alt="" loading="lazy"></button>
+      </div>
+    </div>
+  </article>
+  <article class="proj" data-title="GOLD-252-Cararra">
+    <div class="pinfo">
+      <span class="tag"><span class="ar">سبعتاشر تصميم أرضيات للمصنع</span><span class="en">My seventeenth floor tile design for the factory</span></span>
+      <h3>GOLD-252-Cararra</h3>
+      <p><span class="ar">كرارا أبيض بعروق رمادية انسيابية وبلمعة عالية. عرضتها في حمام فخم، ولقطة قريبة للبلاطات، ولوبي فندقي.</span><span class="en">A white carrara with flowing grey veins in high gloss. Shown in a luxurious bathroom, a close-up of the tiles and a hotel lobby.</span></p>
+      <dl class="specs">
+        <dt><span class="ar">المقاس</span><span class="en">Size</span></dt><dd><span class="ar"><bdi dir="ltr">60×60</bdi> سم</span><span class="en"><bdi dir="ltr">60×60</bdi> cm</span></dd>
+        <dt><span class="ar">الفنش</span><span class="en">Finish</span></dt><dd>High Glossy</dd>
+        <dt><span class="ar">السلسلة</span><span class="en">Series</span></dt><dd>GOLD</dd>
+        <dt><span class="ar">الكود</span><span class="en">Code</span></dt><dd><bdi dir="ltr">252-Cararra</bdi></dd>
+      </dl>
+      <button class="btn" type="button" data-open><span class="ar">شوف الصور بحجم كبير</span><span class="en">View the images large</span></button>
+    </div>
+    <div class="stagewrap">
+      <div class="stage" role="group" aria-label="GOLD-252-Cararra">
+        <div class="slide on" style="--bg:url(gallery/gold252-1-t.jpg)" data-full="gallery/gold252-1.jpg"><img src="gallery/gold252-1.jpg" alt="GOLD-252-Cararra, 1"></div>
+        <div class="slide" style="--bg:url(gallery/gold252-2-t.jpg)" data-full="gallery/gold252-2.jpg"><img data-src="gallery/gold252-2.jpg" alt="GOLD-252-Cararra, 2"></div>
+        <div class="slide" style="--bg:url(gallery/gold252-3-t.jpg)" data-full="gallery/gold252-3.jpg"><img data-src="gallery/gold252-3.jpg" alt="GOLD-252-Cararra, 3"></div>
+        <div class="slide" style="--bg:url(gallery/gold252-4-t.jpg)" data-full="gallery/gold252-4.jpg"><img data-src="gallery/gold252-4.jpg" alt="GOLD-252-Cararra, 4"></div>
+        <button class="zoom" type="button" aria-label="Open large"></button>
+        <button class="nav prev" type="button" aria-label="Previous">&#8249;</button>
+        <button class="nav next" type="button" aria-label="Next">&#8250;</button>
+        <span class="count" aria-live="off">1 / 4</span>
+      </div>
+      <div class="thumbs">
+        <button type="button" class="on" aria-label="1"><img src="gallery/gold252-1-t.jpg" alt=""></button>
+        <button type="button" aria-label="2"><img src="gallery/gold252-2-t.jpg" alt="" loading="lazy"></button>
+        <button type="button" aria-label="3"><img src="gallery/gold252-3-t.jpg" alt="" loading="lazy"></button>
+        <button type="button" aria-label="4"><img src="gallery/gold252-4-t.jpg" alt="" loading="lazy"></button>
+      </div>
+    </div>
+  </article>
+  <article class="proj rev" data-title="GOLD-253-Beige">
+    <div class="pinfo">
+      <span class="tag"><span class="ar">تمنتاشر تصميم أرضيات للمصنع</span><span class="en">My eighteenth floor tile design for the factory</span></span>
+      <h3>GOLD-253-Beige</h3>
+      <p><span class="ar">أرضية بيج دافية بعروق ترابية ناعمة وبلمعة عالية. صممت لها لقطة عرض فخمة على قاعدة سودا بحروف دهبية، ومشاهد لصالات دافية.</span><span class="en">A warm beige floor tile with soft earthy veining in high gloss. I designed a premium showcase on a black plinth with gold lettering, plus warm living-room scenes.</span></p>
+      <dl class="specs">
+        <dt><span class="ar">المقاس</span><span class="en">Size</span></dt><dd><span class="ar"><bdi dir="ltr">60×60</bdi> سم</span><span class="en"><bdi dir="ltr">60×60</bdi> cm</span></dd>
+        <dt><span class="ar">الفنش</span><span class="en">Finish</span></dt><dd>High Glossy</dd>
+        <dt><span class="ar">السلسلة</span><span class="en">Series</span></dt><dd>GOLD</dd>
+        <dt><span class="ar">الكود</span><span class="en">Code</span></dt><dd><bdi dir="ltr">253-Beige</bdi></dd>
+      </dl>
+      <button class="btn" type="button" data-open><span class="ar">شوف الصور بحجم كبير</span><span class="en">View the images large</span></button>
+    </div>
+    <div class="stagewrap">
+      <div class="stage" role="group" aria-label="GOLD-253-Beige">
+        <div class="slide on" style="--bg:url(gallery/gold253-1-t.jpg)" data-full="gallery/gold253-1.jpg"><img src="gallery/gold253-1.jpg" alt="GOLD-253-Beige, 1"></div>
+        <div class="slide" style="--bg:url(gallery/gold253-2-t.jpg)" data-full="gallery/gold253-2.jpg"><img data-src="gallery/gold253-2.jpg" alt="GOLD-253-Beige, 2"></div>
+        <div class="slide" style="--bg:url(gallery/gold253-3-t.jpg)" data-full="gallery/gold253-3.jpg"><img data-src="gallery/gold253-3.jpg" alt="GOLD-253-Beige, 3"></div>
+        <div class="slide" style="--bg:url(gallery/gold253-4-t.jpg)" data-full="gallery/gold253-4.jpg"><img data-src="gallery/gold253-4.jpg" alt="GOLD-253-Beige, 4"></div>
+        <button class="zoom" type="button" aria-label="Open large"></button>
+        <button class="nav prev" type="button" aria-label="Previous">&#8249;</button>
+        <button class="nav next" type="button" aria-label="Next">&#8250;</button>
+        <span class="count" aria-live="off">1 / 4</span>
+      </div>
+      <div class="thumbs">
+        <button type="button" class="on" aria-label="1"><img src="gallery/gold253-1-t.jpg" alt=""></button>
+        <button type="button" aria-label="2"><img src="gallery/gold253-2-t.jpg" alt="" loading="lazy"></button>
+        <button type="button" aria-label="3"><img src="gallery/gold253-3-t.jpg" alt="" loading="lazy"></button>
+        <button type="button" aria-label="4"><img src="gallery/gold253-4-t.jpg" alt="" loading="lazy"></button>
+      </div>
+    </div>
+  </article>
+  <article class="proj" data-title="GOLD-254-Onyx">
+    <div class="pinfo">
+      <span class="tag"><span class="ar">تسعتاشر تصميم أرضيات للمصنع</span><span class="en">My nineteenth floor tile design for the factory</span></span>
+      <h3>GOLD-254-Onyx</h3>
+      <p><span class="ar">أونيكس أبيض فاتح جدا بتدرجات هادية وبلمعة عالية، بيدي المكان إحساس بالاتساع. عرضتها في سفرة ولوبي ولقطة قريبة للبلاطات.</span><span class="en">A very light white onyx with gentle tonal shifts in high gloss that makes a space feel larger. Shown in a dining room, a lobby and a close-up of the tiles.</span></p>
+      <dl class="specs">
+        <dt><span class="ar">المقاس</span><span class="en">Size</span></dt><dd><span class="ar"><bdi dir="ltr">60×60</bdi> سم</span><span class="en"><bdi dir="ltr">60×60</bdi> cm</span></dd>
+        <dt><span class="ar">الفنش</span><span class="en">Finish</span></dt><dd>High Glossy</dd>
+        <dt><span class="ar">السلسلة</span><span class="en">Series</span></dt><dd>GOLD</dd>
+        <dt><span class="ar">الكود</span><span class="en">Code</span></dt><dd><bdi dir="ltr">254-Onyx</bdi></dd>
+      </dl>
+      <button class="btn" type="button" data-open><span class="ar">شوف الصور بحجم كبير</span><span class="en">View the images large</span></button>
+    </div>
+    <div class="stagewrap">
+      <div class="stage" role="group" aria-label="GOLD-254-Onyx">
+        <div class="slide on" style="--bg:url(gallery/gold254-1-t.jpg)" data-full="gallery/gold254-1.jpg"><img src="gallery/gold254-1.jpg" alt="GOLD-254-Onyx, 1"></div>
+        <div class="slide" style="--bg:url(gallery/gold254-2-t.jpg)" data-full="gallery/gold254-2.jpg"><img data-src="gallery/gold254-2.jpg" alt="GOLD-254-Onyx, 2"></div>
+        <div class="slide" style="--bg:url(gallery/gold254-3-t.jpg)" data-full="gallery/gold254-3.jpg"><img data-src="gallery/gold254-3.jpg" alt="GOLD-254-Onyx, 3"></div>
+        <div class="slide" style="--bg:url(gallery/gold254-4-t.jpg)" data-full="gallery/gold254-4.jpg"><img data-src="gallery/gold254-4.jpg" alt="GOLD-254-Onyx, 4"></div>
+        <button class="zoom" type="button" aria-label="Open large"></button>
+        <button class="nav prev" type="button" aria-label="Previous">&#8249;</button>
+        <button class="nav next" type="button" aria-label="Next">&#8250;</button>
+        <span class="count" aria-live="off">1 / 4</span>
+      </div>
+      <div class="thumbs">
+        <button type="button" class="on" aria-label="1"><img src="gallery/gold254-1-t.jpg" alt=""></button>
+        <button type="button" aria-label="2"><img src="gallery/gold254-2-t.jpg" alt="" loading="lazy"></button>
+        <button type="button" aria-label="3"><img src="gallery/gold254-3-t.jpg" alt="" loading="lazy"></button>
+        <button type="button" aria-label="4"><img src="gallery/gold254-4-t.jpg" alt="" loading="lazy"></button>
+      </div>
+    </div>
+  </article>
+  <article class="proj rev" data-title="GOLD-255-Light-Grey">
+    <div class="pinfo">
+      <span class="tag"><span class="ar">عشرين تصميم أرضيات للمصنع</span><span class="en">My twentieth floor tile design for the factory</span></span>
+      <h3>GOLD-255-Light-Grey</h3>
+      <p><span class="ar">أرضية رمادي فاتح بتموجات طبيعية ناعمة وبلمعة عالية. صممت لها لقطة عرض عند مسبح ومشاهد لصالة مفتوحة وركن جلوس بديكور خشبي.</span><span class="en">A light grey floor tile with soft natural waves in high gloss. I designed a poolside showcase shot and scenes of an open-plan living area and a wood-accented lounge.</span></p>
+      <dl class="specs">
+        <dt><span class="ar">المقاس</span><span class="en">Size</span></dt><dd><span class="ar"><bdi dir="ltr">60×60</bdi> سم</span><span class="en"><bdi dir="ltr">60×60</bdi> cm</span></dd>
+        <dt><span class="ar">الفنش</span><span class="en">Finish</span></dt><dd>High Glossy</dd>
+        <dt><span class="ar">السلسلة</span><span class="en">Series</span></dt><dd>GOLD</dd>
+        <dt><span class="ar">الكود</span><span class="en">Code</span></dt><dd><bdi dir="ltr">255-Light Grey</bdi></dd>
+      </dl>
+      <button class="btn" type="button" data-open><span class="ar">شوف الصور بحجم كبير</span><span class="en">View the images large</span></button>
+    </div>
+    <div class="stagewrap">
+      <div class="stage" role="group" aria-label="GOLD-255-Light-Grey">
+        <div class="slide on" style="--bg:url(gallery/gold255-1-t.jpg)" data-full="gallery/gold255-1.jpg"><img src="gallery/gold255-1.jpg" alt="GOLD-255-Light-Grey, 1"></div>
+        <div class="slide" style="--bg:url(gallery/gold255-2-t.jpg)" data-full="gallery/gold255-2.jpg"><img data-src="gallery/gold255-2.jpg" alt="GOLD-255-Light-Grey, 2"></div>
+        <div class="slide" style="--bg:url(gallery/gold255-3-t.jpg)" data-full="gallery/gold255-3.jpg"><img data-src="gallery/gold255-3.jpg" alt="GOLD-255-Light-Grey, 3"></div>
+        <div class="slide" style="--bg:url(gallery/gold255-4-t.jpg)" data-full="gallery/gold255-4.jpg"><img data-src="gallery/gold255-4.jpg" alt="GOLD-255-Light-Grey, 4"></div>
+        <button class="zoom" type="button" aria-label="Open large"></button>
+        <button class="nav prev" type="button" aria-label="Previous">&#8249;</button>
+        <button class="nav next" type="button" aria-label="Next">&#8250;</button>
+        <span class="count" aria-live="off">1 / 4</span>
+      </div>
+      <div class="thumbs">
+        <button type="button" class="on" aria-label="1"><img src="gallery/gold255-1-t.jpg" alt=""></button>
+        <button type="button" aria-label="2"><img src="gallery/gold255-2-t.jpg" alt="" loading="lazy"></button>
+        <button type="button" aria-label="3"><img src="gallery/gold255-3-t.jpg" alt="" loading="lazy"></button>
+        <button type="button" aria-label="4"><img src="gallery/gold255-4-t.jpg" alt="" loading="lazy"></button>
+      </div>
+    </div>
+  </article>
+  <article class="proj" data-title="GOLD-257-Light-Beige">
+    <div class="pinfo">
+      <span class="tag"><span class="ar">واحد وعشرين تصميم أرضيات للمصنع</span><span class="en">My twenty-first floor tile design for the factory</span></span>
+      <h3>GOLD-257-Light-Beige</h3>
+      <p><span class="ar">أرضية بيج فاتح بلمسة وردية دافية وعروق بيضا خفيفة، بلمعة عالية. عرضتها في صالة بإطلالة على حديقة وبنت هاوس وسفرة.</span><span class="en">A light beige floor tile with a warm blush undertone and fine white veining in high gloss. Shown in a garden-view living room, a penthouse and a dining area.</span></p>
+      <dl class="specs">
+        <dt><span class="ar">المقاس</span><span class="en">Size</span></dt><dd><span class="ar"><bdi dir="ltr">60×60</bdi> سم</span><span class="en"><bdi dir="ltr">60×60</bdi> cm</span></dd>
+        <dt><span class="ar">الفنش</span><span class="en">Finish</span></dt><dd>High Glossy</dd>
+        <dt><span class="ar">السلسلة</span><span class="en">Series</span></dt><dd>GOLD</dd>
+        <dt><span class="ar">الكود</span><span class="en">Code</span></dt><dd><bdi dir="ltr">257-Light Beige</bdi></dd>
+      </dl>
+      <button class="btn" type="button" data-open><span class="ar">شوف الصور بحجم كبير</span><span class="en">View the images large</span></button>
+    </div>
+    <div class="stagewrap">
+      <div class="stage" role="group" aria-label="GOLD-257-Light-Beige">
+        <div class="slide on" style="--bg:url(gallery/gold257-1-t.jpg)" data-full="gallery/gold257-1.jpg"><img src="gallery/gold257-1.jpg" alt="GOLD-257-Light-Beige, 1"></div>
+        <div class="slide" style="--bg:url(gallery/gold257-2-t.jpg)" data-full="gallery/gold257-2.jpg"><img data-src="gallery/gold257-2.jpg" alt="GOLD-257-Light-Beige, 2"></div>
+        <div class="slide" style="--bg:url(gallery/gold257-3-t.jpg)" data-full="gallery/gold257-3.jpg"><img data-src="gallery/gold257-3.jpg" alt="GOLD-257-Light-Beige, 3"></div>
+        <div class="slide" style="--bg:url(gallery/gold257-4-t.jpg)" data-full="gallery/gold257-4.jpg"><img data-src="gallery/gold257-4.jpg" alt="GOLD-257-Light-Beige, 4"></div>
+        <button class="zoom" type="button" aria-label="Open large"></button>
+        <button class="nav prev" type="button" aria-label="Previous">&#8249;</button>
+        <button class="nav next" type="button" aria-label="Next">&#8250;</button>
+        <span class="count" aria-live="off">1 / 4</span>
+      </div>
+      <div class="thumbs">
+        <button type="button" class="on" aria-label="1"><img src="gallery/gold257-1-t.jpg" alt=""></button>
+        <button type="button" aria-label="2"><img src="gallery/gold257-2-t.jpg" alt="" loading="lazy"></button>
+        <button type="button" aria-label="3"><img src="gallery/gold257-3-t.jpg" alt="" loading="lazy"></button>
+        <button type="button" aria-label="4"><img src="gallery/gold257-4-t.jpg" alt="" loading="lazy"></button>
+      </div>
+    </div>
+  </article>
+  <article class="proj rev" data-title="GOLD-258-Onyx">
+    <div class="pinfo">
+      <span class="tag"><span class="ar">اتنين وعشرين تصميم أرضيات للمصنع</span><span class="en">My twenty-second floor tile design for the factory</span></span>
+      <h3>GOLD-258-Onyx</h3>
+      <p><span class="ar">أونيكس أبيض شفاف بعروق دهبية رفيعة، بلمعة عالية ولمسة فخمة. صممت لها لقطات لصالة دافية من أكتر من زاوية، ولوحة عرض بمواصفاتها وقت الليل.</span><span class="en">A translucent white onyx with fine golden veins in high gloss. I designed living-room scenes from several angles, and a night-time showcase board with its specs.</span></p>
+      <dl class="specs">
+        <dt><span class="ar">المقاس</span><span class="en">Size</span></dt><dd><span class="ar"><bdi dir="ltr">60×60</bdi> سم</span><span class="en"><bdi dir="ltr">60×60</bdi> cm</span></dd>
+        <dt><span class="ar">الفنش</span><span class="en">Finish</span></dt><dd>High Glossy</dd>
+        <dt><span class="ar">السلسلة</span><span class="en">Series</span></dt><dd>GOLD</dd>
+        <dt><span class="ar">الكود</span><span class="en">Code</span></dt><dd><bdi dir="ltr">258-Onyx</bdi></dd>
+      </dl>
+      <button class="btn" type="button" data-open><span class="ar">شوف الصور بحجم كبير</span><span class="en">View the images large</span></button>
+    </div>
+    <div class="stagewrap">
+      <div class="stage" role="group" aria-label="GOLD-258-Onyx">
+        <div class="slide on" style="--bg:url(gallery/gold258-1-t.jpg)" data-full="gallery/gold258-1.jpg"><img src="gallery/gold258-1.jpg" alt="GOLD-258-Onyx, 1"></div>
+        <div class="slide" style="--bg:url(gallery/gold258-2-t.jpg)" data-full="gallery/gold258-2.jpg"><img data-src="gallery/gold258-2.jpg" alt="GOLD-258-Onyx, 2"></div>
+        <div class="slide" style="--bg:url(gallery/gold258-3-t.jpg)" data-full="gallery/gold258-3.jpg"><img data-src="gallery/gold258-3.jpg" alt="GOLD-258-Onyx, 3"></div>
+        <div class="slide" style="--bg:url(gallery/gold258-4-t.jpg)" data-full="gallery/gold258-4.jpg"><img data-src="gallery/gold258-4.jpg" alt="GOLD-258-Onyx, 4"></div>
+        <button class="zoom" type="button" aria-label="Open large"></button>
+        <button class="nav prev" type="button" aria-label="Previous">&#8249;</button>
+        <button class="nav next" type="button" aria-label="Next">&#8250;</button>
+        <span class="count" aria-live="off">1 / 4</span>
+      </div>
+      <div class="thumbs">
+        <button type="button" class="on" aria-label="1"><img src="gallery/gold258-1-t.jpg" alt=""></button>
+        <button type="button" aria-label="2"><img src="gallery/gold258-2-t.jpg" alt="" loading="lazy"></button>
+        <button type="button" aria-label="3"><img src="gallery/gold258-3-t.jpg" alt="" loading="lazy"></button>
+        <button type="button" aria-label="4"><img src="gallery/gold258-4-t.jpg" alt="" loading="lazy"></button>
+      </div>
+    </div>
+  </article>
+  <div class="ways">
+    <div class="way">
+      <strong>Ceramica Glamour<span class="ar"> / سيراميكا جلامور</span></strong>
+      <span class="hint"><span class="ar">الصفحة الرسمية لشركة متخصصة في تصنيع وتطوير سيراميك الأرضيات والحوائط.</span><span class="en">The official page of a company specialising in manufacturing and developing floor and wall ceramics.</span></span>
+      <p class="more cta"><a class="btn pri" href="https://www.facebook.com/glamourceramic" target="_blank" rel="noopener"><span class="ar">شوف الصفحة على فيسبوك</span><span class="en">See the page on Facebook</span></a></p>
+    </div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <h2><span class="ar">مشاريع أخرى</span><span class="en">More projects</span></h2>
+  <div class="filters" role="group" aria-label="Filter">
+    <button type="button" data-f="all" aria-pressed="true"><span class="ar">الكل</span><span class="en">All</span></button>
+    <button type="button" data-f="branding" aria-pressed="false"><span class="ar">هويات بصرية</span><span class="en">Branding</span></button>
+    <button type="button" data-f="print" aria-pressed="false"><span class="ar">مطبوعات</span><span class="en">Print</span></button>
+    <button type="button" data-f="social" aria-pressed="false"><span class="ar">سوشيال ميديا</span><span class="en">Social media</span></button>
+  </div>
+  <div class="grid" id="grid">
+    <button class="item" type="button" data-cat="branding" data-full="gallery/khayal.jpg"><img src="gallery/khayal-t.jpg" alt="Khayal Store" loading="lazy"><span class="cap"><b>Khayal Store</b><span><span class="ar">هوية براند عطور</span><span class="en">Perfume brand identity</span></span></span></button>
+    <button class="item" type="button" data-cat="branding" data-full="gallery/agtravel.jpg"><img src="gallery/agtravel-t.jpg" alt="AG Travel" loading="lazy"><span class="cap"><b>AG Travel</b><span><span class="ar">هوية شركة سفر</span><span class="en">Travel company identity</span></span></span></button>
+    <button class="item" type="button" data-cat="branding" data-full="gallery/eyeway.jpg"><img src="gallery/eyeway-t.jpg" alt="Eye Way" loading="lazy"><span class="cap"><b>Eye Way</b><span><span class="ar">هوية عيادة عيون</span><span class="en">Eye clinic identity</span></span></span></button>
+    <button class="item" type="button" data-cat="branding" data-full="gallery/citra.jpg"><img src="gallery/citra-t.jpg" alt="Citra Furniture" loading="lazy"><span class="cap"><b>Citra Furniture</b><span><span class="ar">هوية وبوستات أثاث</span><span class="en">Furniture identity and posts</span></span></span></button>
+    <button class="item" type="button" data-cat="print" data-full="gallery/tiles.jpg"><img src="gallery/tiles-t.jpg" alt="Wall Glossy" loading="lazy"><span class="cap"><b>Wall Glossy</b><span><span class="ar">كتالوج بلاط سيراميك</span><span class="en">Ceramic tile collection</span></span></span></button>
+    <button class="item" type="button" data-cat="print" data-full="gallery/clash.jpg"><img src="gallery/clash-t.jpg" alt="Elabtal Super Cup" loading="lazy"><span class="cap"><b>Elabtal Super Cup</b><span><span class="ar">بوستر بطولة كرة قدم</span><span class="en">Football tournament poster</span></span></span></button>
+    <button class="item" type="button" data-cat="print" data-full="gallery/vanishing.jpg"><img src="gallery/vanishing-t.jpg" alt="The Vanishing Point" loading="lazy"><span class="cap"><b>The Vanishing Point</b><span><span class="ar">بوستر فيلم</span><span class="en">Film poster</span></span></span></button>
+    <button class="item" type="button" data-cat="social" data-full="gallery/kroaso.jpg"><img src="gallery/kroaso-t.jpg" alt="Kroaso" loading="lazy"><span class="cap"><b>Kroaso</b><span><span class="ar">إعلان سوشيال ميديا</span><span class="en">Social media ad</span></span></span></button>
+    <button class="item" type="button" data-cat="social" data-full="gallery/coffee.jpg"><img src="gallery/coffee-t.jpg" alt="Coffee Vibes" loading="lazy"><span class="cap"><b>Coffee Vibes</b><span><span class="ar">إعلان سوشيال ميديا</span><span class="en">Social media ad</span></span></span></button>
+    <button class="item" type="button" data-cat="social" data-full="gallery/lahza.jpg"><img src="gallery/lahza-t.jpg" alt="كافيه لحظة" loading="lazy"><span class="cap"><b>كافيه لحظة</b><span><span class="ar">حملة سوشيال ميديا</span><span class="en">Social media campaign</span></span></span></button>
+  </div>
+  <dialog id="lb" aria-label="Project">
+    <div class="lbbar">
+      <span class="t" id="lbt"></span>
+      <span class="nav">
+        <button type="button" id="lbp" aria-label="Previous">&#8249;</button>
+        <button type="button" id="lbn" aria-label="Next">&#8250;</button>
+        <button type="button" id="lbc"><span class="ar">إغلاق</span><span class="en">Close</span></button>
+      </span>
+    </div>
+    <div class="lbbody"><img id="lbi" alt=""></div>
+  </dialog>
+  <p class="more cta"><a class="btn pri" href="https://www.facebook.com/share/g/1DqUVdHWM7/" target="_blank" rel="noopener"><span class="ar">شغل أكتر في جروب ElGraphic على فيسبوك</span><span class="en">More work in the ElGraphic Facebook group</span></a><a class="btn" href="https://www.behance.net/ahmedabdelgawad9" target="_blank" rel="noopener"><span class="ar">شوف الشغل كامل على Behance</span><span class="en">See the full work on Behance</span></a></p>
+</div></section>
+
+<section id="contact"><div class="wrap">
+  <h2><span class="ar">خلينا نشتغل مع بعض</span><span class="en">Let’s work together</span></h2>
+  <div class="ways">
+    <div class="way"><strong><span class="ar">واتساب</span><span class="en">WhatsApp</span></strong><a class="v" href="https://wa.me/201143725504" target="_blank" rel="noopener">+20 114 372 5504</a><button type="button" data-copy="+201143725504"><span class="ar">انسخ الرقم</span><span class="en">Copy number</span></button></div>
+    <div class="way"><strong><span class="ar">مكالمة</span><span class="en">Phone</span></strong><a class="v" href="tel:+201143725504">+20 114 372 5504</a><button type="button" data-copy="+201143725504"><span class="ar">انسخ الرقم</span><span class="en">Copy number</span></button></div>
+    <div class="way"><strong><span class="ar">إيميل</span><span class="en">Email</span></strong><a class="v" href="mailto:abdelgawad8888888@gmail.com">abdelgawad8888888@gmail.com</a><button type="button" data-copy="abdelgawad8888888@gmail.com"><span class="ar">انسخ الإيميل</span><span class="en">Copy email</span></button></div>
+    <div class="way"><strong>Behance</strong><a class="v" href="https://www.behance.net/ahmedabdelgawad9" target="_blank" rel="noopener">behance.net/ahmedabdelgawad9</a></div>
+    <div class="way"><strong><span class="ar">جروب فيسبوك</span><span class="en">Facebook group</span></strong><a class="v" href="https://www.facebook.com/share/g/1DqUVdHWM7/" target="_blank" rel="noopener">ElGraphic (AG)</a><span class="hint"><span class="ar">أكتر من 7 آلاف عضو، ونماذج من شغلي</span><span class="en">7,000+ members, with samples of my work</span></span></div>
+  </div>
+  <form id="f">
+    <label for="n"><span class="ar">اسمك</span><span class="en">Your name</span></label>
+    <input id="n" required autocomplete="name">
+    <label for="m"><span class="ar">محتاج إيه؟</span><span class="en">What do you need?</span></label>
+    <textarea id="m" required></textarea>
+    <p class="hint"><span class="ar">الزرار بيفتح واتساب برسالة جاهزة، وتقدر تراجعها قبل ما تبعتها.</span><span class="en">This opens WhatsApp with your message ready to review before you send it.</span></p>
+    <div class="cta">
+      <button class="btn wa" type="submit"><span class="ar">ابعت على واتساب</span><span class="en">Send on WhatsApp</span></button>
+      <button class="btn" type="button" id="mail"><span class="ar">ابعت بالإيميل</span><span class="en">Send by email</span></button>
+    </div>
+  </form>
+</div></section>
+
+<footer><div class="wrap"><span class="ar">أحمد عبد الجواد، السويس، مصر</span><span class="en">Ahmed Abd Elgawad, Suez, Egypt</span></div></footer>
+
+<a class="float" id="fl" href="https://wa.me/201143725504" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 32 32"><path d="M16 3C9.4 3 4 8.3 4 14.9c0 2.3.7 4.5 1.9 6.3L4 29l8-2c1.8 1 3.8 1.500 6 1.500 6.600 0 12-5.300 12-11.900S22.600 3 16 3zm0 21.800c-1.900 0-3.700-.5-5.200-1.500l-.4-.2-4.100 1 1.100-4-.3-.4a9.700 9.700 0 0 1-1.500-5.200C5.600 9.200 10.300 5 16 5s10.400 4.200 10.400 9.900S21.700 24.800 16 24.800zm5.500-7.300c-.3-.2-1.800-.9-2.100-1s-.5-.2-.7.200-.8 1-1 1.200-.4.200-.7.100a8 8 0 0 1-4-3.500c-.3-.5.300-.5.900-1.600.1-.2 0-.4 0-.5l-1-2.300c-.3-.6-.5-.5-.7-.5h-.6a1.200 1.200 0 0 0-.9.400 3.600 3.600 0 0 0-1.100 2.700c0 1.600 1.200 3.200 1.300 3.400s2.300 3.500 5.600 4.900c2 .9 2.800.9 3.800.8.600-.1 1.800-.7 2.100-1.500s.3-1.300.2-1.500-.3-.2-.6-.4z"/></svg></a>
+
+<script>
+(function(){
+  var PH="201143725504", MAIL="abdelgawad8888888@gmail.com";
+  var root=document.documentElement;
+  function setLang(l){
+    root.lang=l; root.dir=(l==="ar")?"rtl":"ltr";
+    document.title=(l==="ar")?"أحمد عبد الجواد | مصمم جرافيك":"Ahmed Abd Elgawad | Graphic Designer";
+  }
+  document.getElementById("lang").addEventListener("click",function(){setLang(root.lang==="ar"?"en":"ar");});
+  var items=[].slice.call(document.querySelectorAll(".item"));
+  var lb=document.getElementById("lb"), lbi=document.getElementById("lbi"), lbt=document.getElementById("lbt");
+  var list=[], idx=0, lastFocus=null;
+  document.querySelectorAll(".filters button").forEach(function(b){
+    b.addEventListener("click",function(){
+      var f=b.getAttribute("data-f"), sec=b.closest("section");
+      sec.querySelectorAll(".filters button").forEach(function(x){x.setAttribute("aria-pressed",x===b?"true":"false");});
+      items.forEach(function(i){if(i.closest("section")===sec){i.hidden=!(f==="all"||i.getAttribute("data-cat")===f);}});
+    });
+  });
+  function showLb(){
+    var o=list[idx];
+    lbi.src=o.full; lbi.alt=o.alt; lbt.textContent=o.title;
+    document.querySelector(".lbbody").scrollTop=0;
+  }
+  function openAt(arr,i,focusEl){
+    list=arr; idx=i; lastFocus=focusEl; showLb();
+    if(lb.showModal){lb.showModal();}else{lb.setAttribute("open","");}
+  }
+  items.forEach(function(el){
+    el.addEventListener("click",function(){
+      var sec=el.closest("section");
+      var g=items.filter(function(x){return !x.hidden && x.closest("section")===sec;});
+      openAt(g.map(function(x){return {full:x.getAttribute("data-full"),alt:x.querySelector("img").alt,title:x.querySelector("b").textContent};}),g.indexOf(el),el);
+    });
+  });
+  function step(d){
+    if(!list.length) return;
+    idx=(idx+d+list.length)%list.length; showLb();
+  }
+  document.getElementById("lbp").addEventListener("click",function(){step(root.dir==="rtl"?1:-1);});
+  document.getElementById("lbn").addEventListener("click",function(){step(root.dir==="rtl"?-1:1);});
+  document.getElementById("lbc").addEventListener("click",function(){lb.close();});
+  lb.addEventListener("click",function(e){if(e.target===lb) lb.close();});
+  lb.addEventListener("close",function(){lbi.removeAttribute("src");if(lastFocus&&lastFocus.focus)lastFocus.focus();});
+
+  document.querySelectorAll(".proj").forEach(function(p){
+    var slides=[].slice.call(p.querySelectorAll(".slide")), th=[].slice.call(p.querySelectorAll(".thumbs button"));
+    var count=p.querySelector(".count"), stage=p.querySelector(".stage"), title=p.getAttribute("data-title");
+    var reduce=window.matchMedia&&matchMedia("(prefers-reduced-motion:reduce)").matches;
+    var i=0, t=null, hold=false, seen=true, rel=null;
+    function load(n){
+      var im=slides[(n+slides.length)%slides.length].querySelector("img[data-src]");
+      if(im){im.src=im.getAttribute("data-src");im.removeAttribute("data-src");}
+    }
+    function arm(){
+      clearTimeout(t);
+      var run=!(reduce||hold||!seen||document.hidden);
+      p.classList.toggle("playing",run);
+      if(!run) return;
+      t=setTimeout(function(){ if(lb.open){arm();}else{go(i+1);} },5500);
+    }
+    function go(n){
+      i=(n+slides.length)%slides.length;
+      load(i); load(i+1);
+      slides.forEach(function(s,k){s.classList.toggle("on",k===i);});
+      th.forEach(function(b,k){b.classList.toggle("on",k===i); if(k===i){b.setAttribute("aria-current","true");}else{b.removeAttribute("aria-current");}});
+      count.textContent=(i+1)+" / "+slides.length;
+      var tb=th[i], strip=tb.parentNode;
+      strip.scrollLeft=tb.offsetLeft-(strip.clientWidth-tb.offsetWidth)/2;
+      p.classList.remove("playing"); void p.offsetWidth;
+      arm();
+    }
+    function openLarge(){
+      openAt(slides.map(function(s,k){return {full:s.getAttribute("data-full"),alt:s.querySelector("img").alt,title:title+" ("+(k+1)+"/"+slides.length+")"};}),i,stage.querySelector(".zoom"));
+    }
+    load(1);
+    p.querySelector(".prev").addEventListener("click",function(){go(i-1);});
+    p.querySelector(".next").addEventListener("click",function(){go(i+1);});
+    th.forEach(function(b,k){b.addEventListener("click",function(){go(k);});});
+    p.querySelector(".zoom").addEventListener("click",openLarge);
+    var ob=p.querySelector("[data-open]"); if(ob) ob.addEventListener("click",function(){
+      openAt(slides.map(function(s,k){return {full:s.getAttribute("data-full"),alt:s.querySelector("img").alt,title:title+" ("+(k+1)+"/"+slides.length+")"};}),i,ob);
+    });
+    p.addEventListener("mouseenter",function(){hold=true;arm();});
+    p.addEventListener("mouseleave",function(){hold=false;arm();});
+    p.addEventListener("focusin",function(){hold=true;arm();});
+    p.addEventListener("focusout",function(){hold=false;arm();});
+    var sx=null;
+    stage.addEventListener("touchstart",function(e){sx=e.touches[0].clientX;hold=true;clearTimeout(rel);arm();},{passive:true});
+    stage.addEventListener("touchend",function(e){
+      var dx=e.changedTouches[0].clientX-sx;
+      if(Math.abs(dx)>40){go(dx<0?i+1:i-1);}
+      rel=setTimeout(function(){hold=false;arm();},4000);
+    },{passive:true});
+    if("IntersectionObserver" in window){
+      new IntersectionObserver(function(es){seen=es[0].isIntersecting;arm();},{threshold:.25}).observe(stage);
+    }
+    document.addEventListener("visibilitychange",arm);
+    arm();
+  });
+  document.addEventListener("keydown",function(e){
+    if(!lb.open) return;
+    if(e.key==="ArrowLeft") step(root.dir==="rtl"?1:-1);
+    if(e.key==="ArrowRight") step(root.dir==="rtl"?-1:1);
+  });
+  var toast;
+  document.querySelectorAll("[data-copy]").forEach(function(b){
+    b.addEventListener("click",function(){
+      var t=b.getAttribute("data-copy"), orig=b.innerHTML, ar=root.lang==="ar";
+      function done(){b.textContent=ar?"تم النسخ":"Copied";setTimeout(function(){b.innerHTML=orig;},1600);}
+      try{navigator.clipboard.writeText(t).then(done,function(){window.prompt(ar?"انسخ من هنا":"Copy from here",t);});}
+      catch(e){window.prompt(ar?"انسخ من هنا":"Copy from here",t);}
+    });
+  });
+  function msg(){
+    var n=document.getElementById("n").value.trim(), m=document.getElementById("m").value.trim();
+    return root.lang==="ar" ? "أهلاً أحمد، أنا "+n+".\n"+m : "Hi Ahmed, I’m "+n+".\n"+m;
+  }
+  document.getElementById("f").addEventListener("submit",function(e){
+    e.preventDefault();
+    window.open("https://wa.me/"+PH+"?text="+encodeURIComponent(msg()),"_blank","noopener");
+  });
+  document.getElementById("mail").addEventListener("click",function(){
+    var f=document.getElementById("f"); if(!f.reportValidity()) return;
+    var sub=root.lang==="ar"?"طلب تصميم":"Design inquiry";
+    location.href="mailto:"+MAIL+"?subject="+encodeURIComponent(sub)+"&body="+encodeURIComponent(msg());
+  });
+})();
+</script>
+</body>
+</html>
